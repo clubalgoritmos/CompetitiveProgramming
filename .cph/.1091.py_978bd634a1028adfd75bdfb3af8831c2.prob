@@ -1,0 +1,1 @@
+{"name":"Local: 1091","url":"c:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming\\1091.py","tests":[{"id":1709146999794,"input":"5 25\n52 2\n5 13","output":"25 es divisible por 5\n52 es divisible por 2\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming\\1091.py","group":"local","local":true}
