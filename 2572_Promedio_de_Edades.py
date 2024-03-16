@@ -10,11 +10,7 @@
 #    Visto de esta manera consideremos la siguiente cadena y la restricción de edades de 1 a 10 ‘30101102020’ las edades validas son 3, 10, 1, 10, 2, 2 y el promedio de ellas es 4.67
 #   Entrada
 #    La entrada inicia primero con un número T, que es el número de casos de prueba, luego le siguen T líneas donde cada línea es un caso de prueba compuesta por una cadena de caracteres, cada cadena de caracteres tendrá al menos 1 caracter y a lo mas 20 caracteres.
-#    La entrada inicia primero con un número T, que es el número de casos de prueba, luego le siguen T líneas donde cada línea es un caso de prueba compuesta por una cadena de caracteres, cada cadena de caracteres tendrá al menos 1 caracter y a lo mas 20 caracteres.
-#    La entrada inicia primero con un número T, que es el número de casos de prueba, luego le siguen T líneas donde cada línea es un caso de prueba compuesta por una cadena de caracteres, cada cadena de caracteres tendrá al menos 1 caracter y a lo mas 20 caracteres.
 #   Salida
-#    Por cada caso de prueba, mostrar el promedio de las edades en la cadena leida, muestre el promedio con 2 decimales de precisión.
-#    Por cada caso de prueba, mostrar el promedio de las edades en la cadena leida, muestre el promedio con 2 decimales de precisión.
 #    Por cada caso de prueba, mostrar el promedio de las edades en la cadena leida, muestre el promedio con 2 decimales de precisión.
 #   Ejemplo Entrada
 #    711110310110101010155222222223
@@ -22,10 +18,6 @@
 #    1.001.0010.006.007.755.002.11
 #   Ayuda
 #    Para la precisión con 2 decimales usar en python "{:.2f}".format(numero)
-#    Para la precisión con 2 decimales usar en python "{:.2f}".format(numero)
-#    Para la precisión con 2 decimales usar en python
-#    "{:.2f}".format(numero)
-#    "{:.2f}".format(numero)
 
 for _ in range(int(input())):
   V = [int(float(x)) for x in input().strip('\r')]
