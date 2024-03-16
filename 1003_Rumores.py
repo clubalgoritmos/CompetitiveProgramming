@@ -1,24 +1,45 @@
-from collections import deque
+# https://jv.umsa.bo/oj/problem.php?id=1003
+#  Rumores
+#  Enviar
+#  Estado
+#  Descripción
+#   Entrada
+#   Salida
+#   Ejemplo Entrada
+#    14 31 22 33 41 4
+#   Ejemplo Salida
+#    SI
+#   Ayuda
 
-for _ in range(int(input())):
-    N, M = (int(x) for x in input().split())
-    graph = {i:set() for i in range(1,N+1)}
-    for _ in range(M):
-        u, v = (int(x) for x in input().split())
-        graph[u].add(v)
-        graph[v].add(u)
-    X,Y = (int(x) for x in input().split())
-    def bfs(graph, start):
-        visited = set()
-        queue = deque([start])
-        while queue:
-            node = queue.popleft()
-            if node not in visited:
-                visited.add(node)
-                queue.extend(graph[node] - visited)
-        return visited
-    if Y in bfs(graph, X):
-        print("SI")
-    else:
-        print("NO")
+def main():
+    t = int(input())
+    for _ in range(t):
+        n, m = map(int, input().split())
+        matris = [[0]*m for _ in range(2)]
+        for j in range(m):
+            u, v = map(int, input().split())
+            matris[0][j] = u
+            matris[1][j] = v
+        x, y = map(int, input().split())
+        funcion(m, x, y, matris)
+
+def funcion(m, x, y, matris):
+    lista = []
+    for _ in range(m):
+        for i in range(m):
+            if x == matris[0][i]:
+                lista.append(matris[1][i])
+        if lista: 
+            num = len(lista)
+            x = lista[num-1]
+    num = len(lista)
+    for i in range(num):
+        var = lista[i]
+        if var == y:
+            print("SI")
+            return
+    print("NO")
+
+if __name__ == "__main__":
+    main()
         
