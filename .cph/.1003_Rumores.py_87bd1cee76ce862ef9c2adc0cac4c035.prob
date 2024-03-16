@@ -1,1 +1,0 @@
-{"name":"Local: 1003_Rumores","url":"c:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming\\1003_Rumores.py","tests":[{"id":1707862378943,"input":"1\n4 3\n1 2\n2 3\n3 4\n1 4","output":"SI"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming\\1003_Rumores.py","group":"local","local":true}

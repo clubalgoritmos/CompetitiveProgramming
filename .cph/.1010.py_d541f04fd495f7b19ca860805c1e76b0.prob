@@ -1,1 +1,0 @@
-{"name":"Local: 1010","url":"c:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming\\1010.py","tests":[{"id":1709148097258,"input":"3\nUMSAICPC\nICPCUMSA\nICPCUMSHJK","output":"ES POSIBLE\nES POSIBLE\nNO ES POSIBLE"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming\\1010.py","group":"local","local":true}
