@@ -17,13 +17,10 @@
 #   Ejemplo Salida
 #    8.00
 #   Ayuda
-
 import math
 
-# Suponiendo que se te dan las longitudes a, b, c, d
 a,b,c,d = map(int,input().split())
-# Calculando la longitud de X usando la ley del coseno
-cosC = (a**2 + b**2 - c**2) / (2*a*b)
-X = math.sqrt(c**2 + d**2 - 2*c*d*cosC)
-
-print(f"{X:5}")
+#A^2 = B^2 + Z^2
+z = math.sqrt(abs(math.pow(a,2)-math.pow(b,2)))
+x = math.sqrt(math.pow(c+z,2)+math.pow(d,2))
+print(x)

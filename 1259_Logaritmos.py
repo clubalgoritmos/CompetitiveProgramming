@@ -19,6 +19,6 @@ import math
 while True:
     try:
         a,n = map(int,input().split())
-        print(round(math.log(n,a)))
-    except EOFError:
+        print(math.floor(math.log(n,a)))
+    except EOFError:x
         break
