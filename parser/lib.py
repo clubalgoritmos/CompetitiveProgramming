@@ -1,8 +1,58 @@
 import requests, re, os
 from bs4 import BeautifulSoup
 from urllib.parse import parse_qs, urlparse
-from bs4 import BeautifulSoup
 import shutil
+
+class Problem:
+    def __init__(self, id:str, title:str, url:str, path:str, pid:str=None, elements:list=None):
+        if not pid: self.id = id
+        else:
+            self.id = f"{id}-{pid}"
+        self.title = title
+        self.url = url
+        self.path = path
+        self.solved = os.path.exists(self.generate_path())
+        self.elements = elements
+    
+    def __str__(self):
+        return f"{self.id} {self.title} {self.url}"
+    
+    def generate_path(self):
+        return os.path.join(
+            self.path,
+            re.sub(r'[\\/:*?"<>|]', "", f"{self.id}_{self.title}").replace(" ", "_") + ".py",
+        )
+
+    def get(self):
+        elements = self._get_content(self.url,"main h2, main h3, main a, main span, main p, main pre")
+        
+        def search_send():
+            for element in elements:
+                if element["text"]=="Estado":
+                    return self.base_url+element["href"]
+            return self.base_url
+
+    def save(self, path:str):
+        if self.solved:
+            return "ya resuelto"
+        file_path = self.generate_path()
+
+        # Crear el archivo
+        with open(file_path, "w", encoding='utf-8') as file:  # Abrir el archivo en modo de escritura
+            file.write(f"# {self.url}\n#")
+            file.write("\n#".join(self.elements))
+            file.write("\n\n")
+
+        exist_legacy = os.path.join(self.path, f"{id}.py")
+        if os.path.exists(exist_legacy):
+            with open(exist_legacy, "r") as legacy_file:
+                with open(file_path, "a") as new_file:  # Abrir el archivo en modo de agregar
+                    new_file.write(legacy_file.read())
+            os.remove(exist_legacy)  # Borrar el archivo de donde se ha copiado
+
+        # Imprimir la ruta del archivo
+        return file_path
+
 class Parser:
     def __init__(self,path:str=os.getcwd()):
         self.path = path
@@ -18,37 +68,35 @@ class Parser:
         pass
 
     # Función para obtener el texto de un elemento
-    def get_attrs(self, element):
+    def _get_attrs(self, element):
         attrs = element.attrs
         attrs["text"] = "".join(ch for ch in element.get_text().strip() if ch.isprintable())
         attrs["name"] = element.name
         return attrs
 
-    def get_content(self,url:str):
+    def _get_content(self,url:str,query:str,raw:bool=False):
         # Realizar la solicitud HTTP
         response = requests.get(url)
 
         # Analizar el HTML con BeautifulSoup
         soup = BeautifulSoup(response.content, "html.parser")
+        content = soup.select(query)
 
-        return soup
+        if raw:
+            return content
+        elements = list(map(self._get_attrs, content))
+        return elements
 
-    def list_contest(self):
-        for i in range(2815,1000,-1):
-            try:
-                soup = self.get_content(self.base_url+f"contest.php?cid={i}")
-                print(soup.select("main h2")[0].text)
-            except:
-                pass
+    def get_contest(self,url:str):
+        title = self._get_content(url,"main h3")[0]["text"]
+        table = self._get_from_table(url)
+        print(title, url)
 
+        for row in table:
+            print(self.create_problem(self.base_url+row["href"]))
 
-        
-
-    def get_from_table(self,url:str):
-        soup = self.get_content(url)
-
-        # Seleccionar la primera tabla
-        table = soup.select("main table")[0]
+    def _get_from_table(self,url:str):
+        table = self._get_content(url, query="main table",raw=True)[0]
 
         # Obtener las filas de la tabla
         rows = table.select("tbody tr")
@@ -56,21 +104,12 @@ class Parser:
         # Obtener el texto de las filas
         rows = list(map(lambda row: row.select("td a")[0], rows))
         # Obtener el texto de las filas
-        elements = list(map(self.get_attrs, rows))
+        elements = list(map(self._get_attrs, rows))
 
-        for element in elements:
-            print(self.create_Problem(self.base_url+element["href"]))
+        return elements
 
-    def create_Problem(self,url:str):
-        # Realizar la solicitud HTTP
-        response = requests.get(url)
-        soup = BeautifulSoup(response.content, "html.parser")
-
-        # Seleccionar todos los elementos a la vez
-        elements = soup.select("main h2, main h3, main a, main span, main p, main pre")
-
-        # Obtener el texto de los elementos
-        elements = list(map(self.get_attrs, elements))
+    def create_problem(self,url:str):
+        elements = self._get_content(url,"main h2, main h3, main a, main span, main p, main pre")
         
         def search_send():
             for element in elements:
@@ -91,7 +130,7 @@ class Parser:
         
         # Verificar si el archivo ya existe
         if os.path.exists(file_path):
-            return "ya resuelto"
+            return "ya resuelto", file_path
 
         # Obtener el valor de la clave 'text' de cada diccionario
         elements_text = [f"{' '*self.valores[el['name']]} {el['text']}" for el in elements if el['text']!=""]
@@ -99,6 +138,7 @@ class Parser:
         # Crear el archivo
         with open(file_path, "w", encoding='utf-8') as file:  # Abrir el archivo en modo de escritura
             file.write(f"# {url}\n#")
+            file.write(f"# {self.base_url}problem.php?id={id}\n#")
             file.write("\n#".join(elements_text))
             file.write("\n\n")
 

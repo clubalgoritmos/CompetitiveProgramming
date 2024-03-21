@@ -15,3 +15,5 @@
 #    43.30
 #   Ayuda
 
+l = float(input())
+print(f"{(3**.5)/4*l**2:.2f}")
