@@ -13,4 +13,9 @@
 #   Ejemplo Salida
 #    119
 #   Ayuda
-
+while True:
+    try:
+        I = int(input())
+        print(int("0b"+str(bin(I)[2:][::-1]),base=0))
+    except:
+        break
