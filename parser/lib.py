@@ -132,13 +132,14 @@ class Parser:
         if os.path.exists(file_path):
             return "ya resuelto", file_path
 
-        # Obtener el valor de la clave 'text' de cada diccionario
-        elements_text = [f"{' '*self.valores[el['name']]} {el['text']}" for el in elements if el['text']!=""]
+        seen = set()
+        elements_text = [f"{' '*self.valores[el['name']]} {el['text']}" for el in elements if el['text']!="" and f"{' '*self.valores[el['name']]} {el['text']}" not in seen and not seen.add(f"{' '*self.valores[el['name']]} {el['text']}")]
 
         # Crear el archivo
         with open(file_path, "w", encoding='utf-8') as file:  # Abrir el archivo en modo de escritura
             file.write(f"# {url}\n#")
-            file.write(f"# {self.base_url}problem.php?id={id}\n#")
+            if not params_url.get("id", [None])[0]:
+                file.write(f"# {self.base_url}problem.php?id={id}\n#")
             file.write("\n#".join(elements_text))
             file.write("\n\n")
 
@@ -151,3 +152,5 @@ class Parser:
 
         # Imprimir la ruta del archivo
         return file_path
+
+
