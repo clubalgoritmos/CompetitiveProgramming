@@ -14,11 +14,13 @@
 #    1245.00
 #   Ayuda
 
-for _ in range(int(input())):
-  h,sh = (int(x) for x in input().split(' '))
-  a,r=0,0
-  if h-40 >0:
-    a = h-40
-    r = a*sh*1.5
-  r = (h-a)*sh + r
-  print("{:.2f}".format(r))
+t = int(input())
+for _ in range(t):
+    horas, salario = map(int, input().split())
+    pago = 0
+    if horas <= 40:
+        pago = horas * salario
+    else:
+        pago = 40 * salario + (horas - 40) * salario * 1.5
+
+    print("{:.2f}".format(pago))  

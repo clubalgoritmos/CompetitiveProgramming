@@ -14,7 +14,8 @@
 #    10
 #   Ayuda
 
-s=0
-for _ in range(int(input())):
-    s+=int(input())
-print(s)
+N = int(input())
+suma = 0
+for _ in range(N):
+    suma += int(input())
+print(suma)

@@ -19,15 +19,15 @@
 #   Ayuda
 #    En la salida A tiene que ser mayor igual a B.
 
-for _ in range(int(input())):
+t = int(input())
+for _ in range(t):
     X, Y = map(int,input().split())
-    #A + B = X
-    #A - B = Y
-    #A = X + B
-    #X + B - B = Y
-    #X = Y + B
-    #X - Y = B
-    B = (X - Y)//2
-    A = X - B
-    #A>=B
+    # A + B = X
+    # A - B = Y
+    # 2A = X + Y
+    # A = (X + Y) // 2
+    A = (X + Y) // 2
+    # A + B = X
+    # B = X - A
+    B = X - A
     print(A,B)

@@ -16,11 +16,10 @@
 #   Ayuda
 #    Ejemplos:
 #    5 59 4 -> Formato valido5 61 4 -> Formato invalido, se pueden tomar 60 min. y convertirlo en 1 hora27 15 40 -> Formato valido3 5 123 -> Formato invalido, se pueden tomar 2 minutos(120 seg.) del contador de segundos.
-s = int(input())
-hv = 3600
-mv = 60
-h = s//hv
-s = s%hv
-m = s//mv
-s = s%mv
-print(h,m,s)
+
+S = int(input())
+H = S//3600
+S = S%3600
+M = S//60
+S = S%60
+print(H,M,S)

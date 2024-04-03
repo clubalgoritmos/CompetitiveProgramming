@@ -15,6 +15,7 @@
 #    Case 1: 2000Case 2: 2500Case 3: 1500
 #   Ayuda
 
-for i in range(int(input())):
-    a = sorted(map(int,input().split()))
-    print(f"Case {i+1}: {a[1]}")
+t = int(input())
+for i in range(1,t+1):
+    a,b,c = sorted(map(int, input().split()))
+    print(f"Case {i}: {b}")

@@ -13,4 +13,5 @@
 #    44
 #   Ayuda
 
-print(max(map(int,input().split())))
+a,b,c = map(int, input().split())
+print(max(a,b,c))
