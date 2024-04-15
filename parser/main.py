@@ -1,8 +1,8 @@
 import lib
 
 par = lib.Parser(path="C:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming")
-#print(par.create_problem("https://jv.umsa.bo/oj/problem.php?id="+input()))
-print(par.get_contest("https://jv.umsa.bo/oj/contest.php?cid=2820"))
+#print(par.create_problem(input()))
+print(par.get_contest(input()))
 #if input("is a problem?").lower()=="yes":
 #    while True:
 #        try:
@@ -20,5 +20,4 @@ print(par.get_contest("https://jv.umsa.bo/oj/contest.php?cid=2820"))
 # par = lib.Parser(path="C:\\Users\\Andres\\Proyectos\\Practicas-competencias\\parser\\ejercicios")
 #print(par._get_from_table("https://estadistica.umsa.bo/plan-de-estudios2021"))
 
-#https://jv.umsa.bo/contest.php?cid=2823
 #https://jv.umsa.bo/contest.php?cid=2822

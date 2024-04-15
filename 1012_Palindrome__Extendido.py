@@ -3,22 +3,13 @@
 #  Enviar
 #  Estado
 #  Descripción
-#    Un string palindrome, es un string que se lee igual cuando es invertida. Por ejemplo ORURO, ABBA son palindromes, pero ABB no lo es.
-#    Un string palindrome, es un string que se lee igual cuando es invertida. Por ejemplo ORURO, ABBA son palindromes, pero ABB no lo es.
-#    Un string palindrome, es un string que se lee igual cuando es invertida. Por ejemplo ORURO, ABBA son palindromes, pero ABB no lo es.
-#    En este problema tú debes agregar caracteres a la derecha del string dada y convertirla en palindrome (Obviamente si ya es palindrome no es necesario hacer nada mas).
-#    En este problema tú debes agregar caracteres a la derecha del string dada y convertirla en palindrome (Obviamente si ya es palindrome no es necesario hacer nada mas).
-#    En este problema tú debes agregar caracteres a la derecha del string dada y convertirla en palindrome (Obviamente si ya es palindrome no es necesario hacer nada mas).
+#    Un string palindrome, es un string que se lee igual cuando es invertida. Por ejemplo ORURO, ABBA son palindromes, pero ABB no lo es.}
+#    En este problema tú debes agregar caracteres a la derecha del string dada y convertirla en palindrome (Obviamente si ya es palindrome no es necesario hacer nada mas).}
 #   Entrada
-#    Entrada terminara con el string END, cada línea tendrá un string no vacío de letras minúsculas. La longitud de la cadena será menor a 200000.
-#    Entrada terminara con el string END, cada línea tendrá un string no vacío de letras minúsculas. La longitud de la cadena será menor a 200000.
-#    Entrada terminara con el string END, cada línea tendrá un string no vacío de letras minúsculas. La longitud de la cadena será menor a 200000.
+#    Entrada terminara con el string END, cada línea tendrá un string no vacío de letras minúsculas. La longitud de la cadena será menor a 200000.}
 #    END
 #   Salida
 #    Para cada caso de prueba imprimir el palíndrome del string dado.
-#    Para cada caso de prueba imprimir el palíndrome del string dado.
-#    Para cada caso de prueba imprimir el palíndrome del string dado.
-#   Ejemplo Entrada
 #    aaaaabbaamanaplanacanalxyzEND
 #   Ejemplo Salida
 #    aaaaabbaamanaplanacanalpanamaxyzyx

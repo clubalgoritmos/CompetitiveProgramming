@@ -5,18 +5,10 @@
 #  Estado
 #  Descripción
 #    Dado un lote de $n$ numeros, determinar cuantos números pares e impares hay en el lote.
-#    Dado un lote de $n$ numeros, determinar cuantos números pares e impares hay en el lote.
-#    Dado un lote de $n$ numeros, determinar cuantos números pares e impares hay en el lote.
 #   Entrada
 #    La primera linea contiene un número $n$ ($1 \leq n \leq 1000$), el cual indica cuantos números leer.
-#    La primera linea contiene un número $n$ ($1 \leq n \leq 1000$), el cual indica cuantos números leer.
-#    La primera linea contiene un número $n$ ($1 \leq n \leq 1000$), el cual indica cuantos números leer.
-#    Las siguientes $n$ lineas contienen un $n$-ésimo número por linea. ($1 \leq n_{i} \leq 1000$)
-#    Las siguientes $n$ lineas contienen un $n$-ésimo número por linea. ($1 \leq n_{i} \leq 1000$)
 #    Las siguientes $n$ lineas contienen un $n$-ésimo número por linea. ($1 \leq n_{i} \leq 1000$)
 #   Salida
-#    Imprima cuantos números pares e impares existen en el lote.
-#    Imprima cuantos números pares e impares existen en el lote.
 #    Imprima cuantos números pares e impares existen en el lote.
 #   Ejemplo Entrada
 #    512345

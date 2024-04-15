@@ -125,7 +125,7 @@ class Parser:
         # Ruta del archivo
         file_path = os.path.join(
             self.path,
-            re.sub(r'[\\/:*?"<>|]', "", f"{id}_{elements[0]["text"]}").replace(" ", "_") + ".py",
+            re.sub(r'[\\/:*?"<>|]', "", f"{id}_{elements[0]['text']}").replace(" ", "_") + ".py",
         )
         
         # Verificar si el archivo ya existe
