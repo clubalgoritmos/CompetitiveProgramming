@@ -23,10 +23,10 @@ while True:
     if n == 0:
         break
     arr = list(map(int, input().split()))
-    heapq.heapify(arr)  # Convierte arr en un heap
+    heapq.heapify(arr)
     total_cost = 0
-    while len(arr) > 1:  # Mientras haya más de un elemento en el heap
-        cost = heapq.heappop(arr) + heapq.heappop(arr)  # Saca los dos elementos más pequeños y súmalos
-        total_cost += cost  # Añade el coste al total
-        heapq.heappush(arr, cost)  # Añade el coste de nuevo al heap
+    while len(arr) > 1:
+        cost = heapq.heappop(arr) + heapq.heappop(arr)
+        total_cost += cost
+        heapq.heappush(arr, cost) 
     print(total_cost)

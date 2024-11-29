@@ -1,3 +1,4 @@
+# Solucion
 # https://jv.umsa.bo/oj/problem.php?cid=2567&pid=5
 #  DESCOMPOSICIÓN EN FACTORIALES
 #  Estado

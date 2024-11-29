@@ -28,7 +28,7 @@
 
 x=int(input())
 if x%2==0:
-    print("No es Número Primo")
+    print("No es Primo")
 else:
     if len(str(x))==1:
         ylist = [int(y) for y in list(str(x*x))]
@@ -40,8 +40,8 @@ else:
         ylist = [int(y) for y in list(str(rel))]
         y = y+1
         if y > 10:
-            print("Número Primo Infeliz")
+            print("Primo Infeliz")
             break
            
     if sum(ylist) == 1:
-        print("Número Primo Feliz")
+        print("Primo Feliz")

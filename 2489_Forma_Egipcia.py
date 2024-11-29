@@ -19,15 +19,15 @@
 
 import math
 
-def egyptian_fraction(x, y):
-    result = []
+def egyf(x, y):
+    r = []
     while x != 0:
         z = math.ceil(y/x)
-        result.append(z)
+        r.append(z)
         x, y = -y % x, y * z
-    return result
+    return r
 
 for _ in range(int(input())):
     x, y = map(int, input().split())
-    fractions = egyptian_fraction(x, y)
-    print(" ".join(["(1, {})".format(i) for i in fractions]))
+    f = egyf(x, y)
+    print(" ".join(["(1, {})".format(i) for i in f]))

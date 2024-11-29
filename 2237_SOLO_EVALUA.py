@@ -17,9 +17,9 @@
 #   Ayuda
 #    4 / 6 = 0.66666666666666665 / 7 = 0.71428571428571436 / 8 = 0.757 / 9 = 0.77777777777777788 / 10 = 0.89 / 11 = 0.818181818181818210 / 12 = 0.833333333333333411 / 13 = 0.846153846153846112 / 14 = 0.857142857142857113 / 15 = 0.8666666666666667
 
-    while True:
-        try:
-            N, K = map(int,input().split())
-            print(int(sum((i+K)/(2+i+K) for i in range(N))+1))
-        except EOFError:
-            break
+while True:
+    try:
+        N, K = map(int,input().split())
+        print(int(sum((i+K)/(2+i+K) for i in range(N))+1))
+    except EOFError:
+        break

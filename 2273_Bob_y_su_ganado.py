@@ -29,7 +29,7 @@ for _ in range(int(input())):
         ubica.append(int(input()))
 
     def check(mid):
-        cows = 1sd
+        cows = 1
         pos = ubica[0]
         for i in range(1, N):
             if ubica[i] - pos >= mid:
