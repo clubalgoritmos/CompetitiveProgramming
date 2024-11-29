@@ -1,8 +1,8 @@
 import lib
 
 par = lib.Parser(path="C:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming")
-#print(par.create_problem(input()))
-print(par.get_contest(input()))
+print(par.create_problem(input()))
+#print(par.get_contest(input()))
 #if input("is a problem?").lower()=="yes":
 #    while True:
 #        try:
