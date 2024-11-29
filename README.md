@@ -1,3 +1,3 @@
-**🎓Title** 🌐
+**🎓Other academic contests** 🌐
 
 Text
