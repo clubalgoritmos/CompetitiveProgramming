@@ -13,6 +13,6 @@
 | E   | [Francin rumbo a los Yungas](e.py) | Solved               |
 | F   | [Bananitas FC 2.0](f.py)           | Solved (not contest) |
 | G   | [El conteo mágico](g.py)           | Solved               |
-| H   | [Triangulos](h.py)                 | Solved (not contest  |
+| H   | [Triangulos](h.py)                 | Solved (not contest) |
 | I   | [CONMEBOL >>>> UEFA](i.py)         | Solved               |
 | J   | [Buscando el password](j.py)       | Solved               |
