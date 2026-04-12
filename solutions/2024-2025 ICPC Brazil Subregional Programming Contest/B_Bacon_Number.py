@@ -1,3 +1,7 @@
+# | competition: "2024 ICPC Brazil Subregional"
+# | problem_id: "B"
+# | title: "Bacon Number"
+
 from collections import deque, defaultdict
 
 n, m = map(int, input().split())

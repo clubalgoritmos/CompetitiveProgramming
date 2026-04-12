@@ -1,3 +1,8 @@
+# | competition: "2024 ICPC Brazil Subregional"
+# | problem_id: "K"
+# | title: "Karamell"
+
+
 def solve(i, j, n, a, dp, c):
     if j == 0:
         return 1

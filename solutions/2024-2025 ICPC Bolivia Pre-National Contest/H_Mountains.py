@@ -1,3 +1,7 @@
+# | competition: "ICPC Pre-National Bolivia – 2024"
+# | problem_id: "H"
+# | title: "Mountains"
+
 mx = float("-inf")
 mx_i = 0
 t = 0

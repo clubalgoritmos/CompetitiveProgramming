@@ -1,3 +1,8 @@
+# | competition: "2024 ICPC Brazil Subregional"
+# | problem_id: "H"
+# | title: "Harmonics with Interference"
+
+
 def generate_combinations(s):
     if "*" not in s:
         return [s]

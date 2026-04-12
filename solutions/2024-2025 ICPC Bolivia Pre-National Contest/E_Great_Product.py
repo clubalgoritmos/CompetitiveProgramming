@@ -1,3 +1,8 @@
+# | competition: "ICPC Pre-National Bolivia – 2024"
+# | problem_id: "E"
+# | title: "Great Product"
+
+
 def rec(N):
     if N == 1:
         return []

@@ -1,3 +1,8 @@
+# | competition: "2024 ICPC Brazil Subregional"
+# | problem_id: "L"
+# | title: "Lecographically Maximum"
+
+
 def count_bits(numbers):
     max_num = max(numbers)
     max_len = max_num.bit_length()

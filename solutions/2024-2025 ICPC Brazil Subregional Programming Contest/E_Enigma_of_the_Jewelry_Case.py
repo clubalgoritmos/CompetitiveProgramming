@@ -1,3 +1,7 @@
+# | competition: "2024 ICPC Brazil Subregional"
+# | problem_id: "E"
+# | title: "Enigma of the Jewelry case"
+
 N = int(input())
 M = [list(map(int, input().split())) for _ in range(N)]
 mins = float("-inf")

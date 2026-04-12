@@ -1,3 +1,7 @@
+# | competition: "2024 ICPC Brazil Subregional"
+# | problem_id: "I"
+# | title: "Ingredients that may Harm You"
+
 MAXN = 1000006
 mod = 1000000007
 

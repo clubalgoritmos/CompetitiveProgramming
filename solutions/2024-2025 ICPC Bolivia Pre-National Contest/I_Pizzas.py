@@ -1,3 +1,8 @@
+# | competition: "ICPC Pre-National Bolivia – 2024"
+# | problem_id: "I"
+# | title: "Pizzas"
+
+
 class UnionFind:
     def __init__(self, size):
         self.parent = list(range(size))
