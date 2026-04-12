@@ -1,5 +1,9 @@
 project:
   type: website
+  render:
+    - "**/*.qmd"
+    - "docs/**/*.md"
+    - "!docs/plans/**"
 
 website:
   title: "Competitive Programming Knowledge Hub"
