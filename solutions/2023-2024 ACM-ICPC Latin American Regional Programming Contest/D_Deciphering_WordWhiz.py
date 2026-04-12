@@ -1,4 +1,7 @@
-# solucion
+# | competition: "ICPC Latin American Regional – 2023"
+# | problem_id: "D"
+# | title: "Deciphering WordWhiz"
+
 n = int(input())
 ex = input()
 

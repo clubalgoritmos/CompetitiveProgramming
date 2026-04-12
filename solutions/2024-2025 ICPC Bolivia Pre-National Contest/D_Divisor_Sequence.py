@@ -1,3 +1,7 @@
+# | competition: "ICPC Pre-National Bolivia – 2024"
+# | problem_id: "D"
+# | title: "Divisor Sequence"
+
 import math
 
 
