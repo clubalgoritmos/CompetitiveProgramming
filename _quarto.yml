@@ -10,6 +10,7 @@ project:
 website:
   title: "Competitive Programming Knowledge Hub"
   repo-url: "https://github.com/clubalgoritmos/CompetitiveProgramming"
+  google-analytics: "G-LH29TM4R49"
   navbar:
     left:
       - href: index.qmd
