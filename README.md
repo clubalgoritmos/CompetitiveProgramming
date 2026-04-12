@@ -1,27 +1,49 @@
-**🎓Competencia de Programación Competitiva Universitaria (ICPC)** 🌐
+# 🚀 Competitive Programming Knowledge Hub
 
-Este texto se refiere a los problemas que se encuentran en las competencias de programación regionales de la International Collegiate Programming Contest (ICPC). En este estan los contests en los que he participado y problemas que he resuelto 🏆
+### *Lógica, Eficiencia y Proyectos Personales*
 
-Enlaces.
-- [2024-2025 ICPC Brazil Subregional Programming Contest](/2024-2025%20ICPC%20Brazil%20Subregional%20Programming%20Contest/)
-- [2024-2025 ICPC Bolivia Pre-National Contest](/2024-2025%20ICPC%20Bolivia%20Pre-National%20Contest/)
+Este es mi repositorio centralizado de **Programación Competitiva**. Más que un simple almacén de código, es una plataforma de ingeniería donde documento mi proceso de resolución de problemas, optimización de algoritmos y experimentación técnica.
+
+Mi enfoque como estudiante de **Ingeniería de Sistemas (UDABOL)** y **Estadística (UMSA)** se aleja de la memorización; busco soluciones que sean útiles en múltiples contextos y que me permitan explorar nuevas tecnologías como **WebAssembly** y **Arquitecturas de Datos**.
 
 
-**🎓 Universidad Mayor de San Andres (UMSA) - Juez Virtual** 🌐
 
-Este texto se refiere a los problemas que se encuentran en el juez virtual de la **Universidad Mayor de San Andres (UMSA)**. El [Juez Virtual UMSA](https://jv.umsa.bo/) ofrece un conjunto de problemas para resolver, así como problemas de concursos anteriores. 🏆
+## 🏆 Desafíos y Contests
 
-Entre estos concursos se encuentran las [**Olimpiadas de Ciencias San Andres**](https://sites.google.com/view/olimpiada-ocsa/inicio) y las [**Olimpiadas Cientificas Escolares**](https://ocb.fcpn.edu.bo/). Además, se realizan concursos mensuales automáticos de programación competitiva. 💻🚀
+Este espacio consolida mi trayectoria en las competencias más exigentes del circuito:
 
-Si eres nuevo en este tema, la programación competitiva es un deporte mental que desafía a los participantes a resolver problemas complejos utilizando sus conocimientos de algoritmos y estructuras de datos. Es una excelente manera de mejorar tus habilidades de programación y resolución de problemas. 🧠💡
+### 🌎 International Collegiate Programming Contest (ICPC)
 
-Agradecer a los siguientes contribuidores y sus repositorios
+Resoluciones detalladas de problemas propuestos en las fases regionales y pre-nacionales:
 
-* [CrisBelDev/ejercicios-Juez-Pato](https://github.com/CrisBelDev/ejercicios-Juez-Pato)
-* [Paupau18me/EjerciciosPatitoPython2021](https://github.com/Paupau18me/EjerciciosPatitoPython2021)
-* [RyuYii/Problemas-del-Juez-Pato-Python-](https://github.com/RyuYii/Problemas-del-Juez-Pato-Python-)
-* [coderoycc/python-patito](https://github.com/coderoycc/python-patito)
+  * [**2024-2025 ICPC Brazil Subregional**](https://www.google.com/search?q=./2024-2025%2520ICPC%2520Brazil%2520Subregional%2520Programming%2520Contest/): Desafíos de alto nivel de la región brasileña.
+  * [**2024-2025 ICPC Bolivia Pre-National**](https://www.google.com/search?q=./2024-2025%2520ICPC%2520Bolivia%2520Pre-National%2520Contest/): Mi camino en la clasificatoria nacional boliviana.
+  * [**Latin American Regionals**](https://www.google.com/search?q=./2022-2023%2520ACM-ICPC%2520Latin%2520American%2520Regional%2520Programming%2520Contest/): Histórico de problemas regionales resueltos entre 2022 y 2025.
 
-# Colaboradores y Contribuidores
+### 🏛️ Juez Virtual UMSA & OCSA
 
-![Colaboradores](https://contributors-img.web.app/image?repo=andres-chirinos/PyCompetitiveProgramming)
+Soluciones a problemas del [Juez Virtual UMSA](https://jv.umsa.bo/), incluyendo participaciones en las **Olimpiadas de Ciencias San Andrés (OCSA)** y olimpiadas escolares.
+
+
+
+## 🛠️ Filosofía del Proyecto: "Build once, use everywhere"
+
+Este repositorio está diseñado para ser la fuente de verdad de mi sitio web interactivo. La arquitectura se basa en:
+
+1.  **Scripts Funcionales:** Código puro en `.py` y `.cpp` que sirve tanto para subir a los jueces como para ser ejecutado localmente.
+2.  **Documentación Interactiva:** Uso de **Quarto** para transformar comentarios de código en páginas web dinámicas.
+3.  **Ejecución en Navegador:** Implementación de **WebAssembly** (vía Pyodide/quarto-live) para que cualquier persona pueda probar las soluciones directamente en la web.
+4.  **Multi-solución:** Soporte para diferentes lógicas o lenguajes para un mismo problema, permitiendo un análisis comparativo de rendimiento.
+
+
+
+## 🤝 Colaboradores y Contribuidores
+
+Agradezco la base de conocimiento y los repositorios de la comunidad que han servido de referencia en mi aprendizaje:
+
+  * [CrisBelDev](https://github.com/CrisBelDev/ejercicios-Juez-Pato) | [Paupau18me](https://github.com/Paupau18me/EjerciciosPatitoPython2021) | [RyuYii](https://github.com/RyuYii/Problemas-del-Juez-Pato-Python-) | [coderoycc](https://github.com/coderoycc/python-patito)
+
+
+
+> *"Siempre pienso en hacer una cosa que me sirva para otras, que todo lo que haga sea útil para más de un lugar o situación."*
+
