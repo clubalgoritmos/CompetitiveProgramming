@@ -1,6 +1,6 @@
 import os
 import re
-import lib
+import scripts.parser.lib as lib
 import concurrent.futures
 
 # Obtén el directorio actual

@@ -1,4 +1,4 @@
-import lib
+import scripts.parser.lib as lib
 
 par = lib.Parser(path="C:\\Users\\Andres\\Proyectos\\PyCompetitiveProgramming")
 print(par.create_problem(input()))
