@@ -1,0 +1,5 @@
+---
+title: "Sobre el Proyecto"
+---
+
+{{< include "../README.md" >}}

@@ -4,6 +4,8 @@ project:
     - "**/*.qmd"
     - "docs/**/*.md"
     - "!docs/plans/**"
+  resources:
+    - "docs/problems/catalog.json"
 
 website:
   title: "Competitive Programming Knowledge Hub"
@@ -11,6 +13,12 @@ website:
     left:
       - href: index.qmd
         text: Inicio
+      - href: docs/problemas.qmd
+        text: Problemas
+      - href: docs/competencias.qmd
+        text: Competencias
+      - href: docs/documentacion.qmd
+        text: Documentacion
 
 format:
   html:

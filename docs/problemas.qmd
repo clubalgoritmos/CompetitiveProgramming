@@ -1,0 +1,92 @@
+---
+title: "Indice de Problemas"
+---
+
+Explora todos los problemas detectados por metadatos. Puedes buscar por nombre, competencia o ID, y filtrar por tag.
+
+<div class="cp-controls">
+  <input id="problem-search" type="search" placeholder="Buscar por titulo, ID o competencia..." />
+  <select id="problem-tag">
+    <option value="">Todos los tags</option>
+  </select>
+  <span id="problem-count" class="cp-count"></span>
+</div>
+
+<div id="problem-empty" class="cp-empty" style="display:none;">No hay resultados para los filtros actuales.</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover cp-table">
+    <thead>
+      <tr>
+        <th>Problema</th>
+        <th>Competencia</th>
+        <th>Tags</th>
+        <th>Lenguajes</th>
+      </tr>
+    </thead>
+    <tbody id="problem-body"></tbody>
+  </table>
+</div>
+
+<script>
+(async function () {
+  const response = await fetch("problems/catalog.json");
+  const data = await response.json();
+
+  const searchEl = document.getElementById("problem-search");
+  const tagEl = document.getElementById("problem-tag");
+  const bodyEl = document.getElementById("problem-body");
+  const countEl = document.getElementById("problem-count");
+  const emptyEl = document.getElementById("problem-empty");
+
+  const queryCompetition = new URLSearchParams(window.location.search).get("competition") || "";
+  if (queryCompetition) {
+    searchEl.value = queryCompetition;
+  }
+
+  const tags = [...new Set(data.flatMap(item => item.tags || []))].sort((a, b) => a.localeCompare(b));
+  for (const tag of tags) {
+    const option = document.createElement("option");
+    option.value = tag;
+    option.textContent = tag;
+    tagEl.appendChild(option);
+  }
+
+  function render() {
+    const term = searchEl.value.trim().toLowerCase();
+    const selectedTag = tagEl.value;
+
+    const filtered = data.filter(item => {
+      const haystack = [
+        item.problem_id,
+        item.title,
+        item.competition,
+        ...(item.languages || []),
+      ].join(" ").toLowerCase();
+
+      const matchText = !term || haystack.includes(term);
+      const matchTag = !selectedTag || (item.tags || []).includes(selectedTag);
+      return matchText && matchTag;
+    });
+
+    bodyEl.innerHTML = "";
+    for (const item of filtered) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td><a href="${item.url}"><strong>${item.problem_id}</strong> - ${item.title}</a></td>
+        <td>${item.competition}</td>
+        <td>${(item.tags || []).map(tag => `<span class="cp-tag">${tag}</span>`).join(" ")}</td>
+        <td>${(item.languages || []).join(", ")}</td>
+      `;
+      bodyEl.appendChild(tr);
+    }
+
+    countEl.textContent = `${filtered.length} resultado(s)`;
+    emptyEl.style.display = filtered.length === 0 ? "block" : "none";
+  }
+
+  searchEl.addEventListener("input", render);
+  tagEl.addEventListener("change", render);
+  render();
+})();
+</script>

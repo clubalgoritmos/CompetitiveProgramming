@@ -1,1 +1,60 @@
 /* css styles */
+
+.cp-controls {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin: 1rem 0;
+}
+
+.cp-controls input,
+.cp-controls select {
+	border: 1px solid #c9d1d9;
+	border-radius: 0.5rem;
+	min-width: 220px;
+	padding: 0.45rem 0.65rem;
+}
+
+.cp-count {
+	color: #4b5563;
+	font-size: 0.92rem;
+	margin-left: auto;
+}
+
+.cp-tag {
+	background: #e8f1ff;
+	border: 1px solid #bfd8ff;
+	border-radius: 999px;
+	color: #124078;
+	display: inline-block;
+	font-size: 0.78rem;
+	margin: 0.1rem 0.2rem 0.1rem 0;
+	padding: 0.15rem 0.55rem;
+}
+
+.cp-grid {
+	display: grid;
+	gap: 0.9rem;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	margin-top: 1rem;
+}
+
+.cp-card {
+	background: #f8fbff;
+	border: 1px solid #d8e6ff;
+	border-radius: 0.8rem;
+	padding: 1rem;
+}
+
+.cp-card h3 {
+	margin-top: 0;
+}
+
+.cp-empty {
+	border: 1px dashed #cbd5e1;
+	border-radius: 0.6rem;
+	color: #64748b;
+	margin-top: 0.8rem;
+	padding: 0.8rem;
+}

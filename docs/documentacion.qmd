@@ -1,0 +1,22 @@
+---
+title: "Documentacion del Proyecto"
+---
+
+Esta seccion reune guias para contribuir, estructura del proyecto y notas tecnicas.
+
+## Guias principales
+
+- [Guia de contribucion](guia-contribucion.qmd)
+- [Sobre el proyecto](sobre-proyecto.qmd)
+
+## Documentos tecnicos
+
+- [Introduccion](Introducción.md)
+- [Analisis](Analisis.md)
+
+## Flujo recomendado
+
+1. Agregar metadatos en cada solucion nueva.
+2. Ejecutar `python scripts/build_site.py`.
+3. Verificar con `quarto render` o `quarto preview`.
+4. Enviar cambios en un Pull Request.

@@ -156,3 +156,4 @@ cython_debug/
 /.quarto/
 **/*.quarto_ipynb
 /_site/
+/docs/problems/*

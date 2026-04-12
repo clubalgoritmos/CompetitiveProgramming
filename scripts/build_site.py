@@ -1,4 +1,6 @@
 import re
+import json
+import os
 from pathlib import Path
 from collections import defaultdict
 
@@ -20,6 +22,12 @@ def parse_metadata(file_path):
             metadata[key] = value
             
     return metadata
+
+
+def slugify(value):
+    slug = re.sub(r"[^A-Za-z0-9]+", "_", value.strip())
+    slug = slug.strip("_")
+    return slug or "item"
 
 def main():
     solutions_dir = Path('solutions')
@@ -50,24 +58,38 @@ def main():
         print("Recuerda agregar bloques '#| competition: ...' y '#| problem_id: ...' a tus scripts.")
         return
 
+    catalog = []
+
     # Generar archivos QMD
     for competition, probs in problems.items():
-        comp_dir = output_dir / competition.replace(' ', '_')
+        comp_slug = slugify(competition)
+        comp_dir = output_dir / comp_slug
         comp_dir.mkdir(parents=True, exist_ok=True)
         
         for problem_id, files in probs.items():
+            files = sorted(files, key=lambda item: (item.get('language', ''), item.get('file_path', '')))
             first_meta = files[0]
             title = first_meta.get('title', f"Problem {problem_id}")
-            tags = first_meta.get('tags', [])
             desc = first_meta.get('description', '')
+            problem_slug = slugify(problem_id)
+            tag_set = []
+            for meta in files:
+                for tag in meta.get('tags', []):
+                    if tag and tag not in tag_set:
+                        tag_set.append(tag)
+            languages = []
+            for meta in files:
+                lang = meta.get('language', 'Code')
+                if lang not in languages:
+                    languages.append(lang)
             
-            qmd_path = comp_dir / f"{problem_id}.qmd"
+            qmd_path = comp_dir / f"{problem_slug}.qmd"
             with open(qmd_path, 'w', encoding='utf-8') as f:
                 f.write("---\n")
                 f.write(f"title: \"Problema {problem_id}: {title}\"\n")
-                if tags:
+                if tag_set:
                     f.write("categories:\n")
-                    for tag in tags:
+                    for tag in tag_set:
                         f.write(f"  - \"{tag}\"\n")
                 f.write("---\n\n")
                 
@@ -82,14 +104,35 @@ def main():
                     f.write(f"### {lang} ({approach})\n")
                     
                     code_lang = 'python' if meta['ext'] == '.py' else 'cpp'
-                    include_path = Path(meta['file_path']).as_posix()
+                    include_path = Path(meta['file_path'])
+                    rel_include = os.path.relpath(include_path, start=qmd_path.parent)
+                    rel_include = Path(rel_include).as_posix()
                     f.write(f"```{code_lang}\n")
-                    f.write(f"{{{{< include \"../../../{include_path}\" >}}}}\n")
+                    f.write(f"{{{{< include \"{rel_include}\" >}}}}\n")
                     f.write(f"```\n\n")
                     
                 f.write(":::\n")
+
+            catalog.append({
+                "competition": competition,
+                "competition_slug": comp_slug,
+                "problem_id": problem_id,
+                "problem_slug": problem_slug,
+                "title": title,
+                "description": desc,
+                "tags": tag_set,
+                "languages": languages,
+                "solutions_count": len(files),
+                "url": f"problems/{comp_slug}/{problem_slug}.html",
+            })
+
+    catalog = sorted(catalog, key=lambda item: (item["competition"].lower(), str(item["problem_id"]).lower()))
+    catalog_path = output_dir / 'catalog.json'
+    with open(catalog_path, 'w', encoding='utf-8') as f:
+        json.dump(catalog, f, ensure_ascii=False, indent=2)
                 
     print(f"Sitio construido exitosamente en {output_dir}")
+    print(f"Problemas generados: {len(catalog)} | Archivos omitidos por falta de metadatos: {skipped_count}")
 
 if __name__ == '__main__':
     main()
