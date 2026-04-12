@@ -1,5 +1,3 @@
-.*
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -158,3 +156,4 @@ cython_debug/
 /_site/
 /docs/problems/*
 /docs/competitions/*
+.cph/
