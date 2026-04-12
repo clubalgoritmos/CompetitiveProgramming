@@ -21,4 +21,3 @@
 #    Ejemplo 2:Entrada:1234567890
 #    Salida:
 #    1
-

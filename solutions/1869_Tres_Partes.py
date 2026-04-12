@@ -28,4 +28,3 @@
 #    En el primer ejemplo, solo hay una división posible que maximiza es sum1 = 5: [1,3,1], [], [1,4].
 #    En el segundo ejemplo, la única forma de tener sum1 = 4: [1,3], [2,1], [4].
 #    En el tercer ejemplo, solo hay una forma de dividir el arreglo sum1 = 0: [], [4,1,2], [].
-

@@ -14,10 +14,10 @@
 #    felizlentesfelizfelizlentes
 #   Ayuda
 
-#casi igual
+# casi igual
 import sys
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for i in sys.stdin:
         a, b = i.split()
         cont = 0
@@ -27,6 +27,6 @@ if __name__ == '__main__':
                 if cont > 1:
                     break
         if cont <= 1:
-            print('feliz')
+            print("feliz")
         else:
-            print('lentes')
+            print("lentes")

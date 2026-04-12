@@ -21,4 +21,3 @@
 #    Ten en cuenta que en el caso
 #    30 10 10
 #    i y j son iguales por lo tanto la cadena resultante seria la caden vacia.
-

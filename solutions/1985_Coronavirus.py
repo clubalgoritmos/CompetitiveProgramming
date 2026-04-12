@@ -51,16 +51,16 @@
 #    El primer caso de prueba se explicó en el enunciado. En el segundo caso de prueba, una de las divisiones óptimas es $A$ = [$2$,$1$], $B$ = [$3$,$2$,$4$,$3$], por lo que la respuesta es |$2$−$2$| = $0$.
 
 n = int(input())
- 
+
 for i in range(n):
     tam = int(input())
     lista = list(map(int, input().split()))
     lista.sort()
     minimo = 100000000000000000000000
-    for i in range(1,tam):
+    for i in range(1, tam):
         a = lista[0:i]
         b = lista[i:tam]
-        menor = max(a)-min(b)
+        menor = max(a) - min(b)
         menor = abs(menor)
         if menor < minimo:
             minimo = menor

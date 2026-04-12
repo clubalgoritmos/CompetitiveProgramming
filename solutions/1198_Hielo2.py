@@ -66,4 +66,3 @@
 #    4 6X...XX...XX..X..X.......1 62 2
 #   Ejemplo Salida
 #   Ayuda
-

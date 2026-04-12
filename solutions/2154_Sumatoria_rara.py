@@ -25,17 +25,19 @@
 N = int(input())
 x = int(input())
 
+
 def generate_series():
-        current_term = 2
-        index = 2
-        while True:
-            yield current_term
-            current_term += index
-            index += 1
+    current_term = 2
+    index = 2
+    while True:
+        yield current_term
+        current_term += index
+        index += 1
+
 
 S = 0
 for _ in range(N):
     w = generate_series()
-    print(next(w)) 
+    print(next(w))
     S += (x) / N
 print(S)

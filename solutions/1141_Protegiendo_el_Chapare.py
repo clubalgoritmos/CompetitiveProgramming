@@ -19,8 +19,8 @@
 #    En el primer ejemplo tenemos 4 estaciones ubicadas en los puntos de los ejes cartesianos. Hallamos las distancias entre cada punto con la formula de la distancia entre dos punto X(i,j) y Y(i,j). Con estas distancias armamos el grafo de las conexiones que será un grafo dirigido, con el que se resolverá el problema.
 while True:
     N = int(input())
-    if N==0:
+    if N == 0:
         break
     for i in range(N):
-        x,y = map(int,input().split())
+        x, y = map(int, input().split())
         # print((x,y))

@@ -17,6 +17,6 @@
 #    Considerar la cantidad de piedras necesarias es mayor a los palitos necesarios para hacer una picota
 
 for i in range(int(input())):
-    pie,pal = map(int,input().split())
-    pic = min(pie//3, pal//2)
-    print(pic, pie+pal-pic*5)
+    pie, pal = map(int, input().split())
+    pic = min(pie // 3, pal // 2)
+    print(pic, pie + pal - pic * 5)

@@ -27,4 +27,3 @@
 #    En el cuarto caso de prueba del ejemplo, Mario puede elegir $d = 1$ y saltar $5$ veces hacia la derecha.
 #    En el quinto caso de prueba del ejemplo, Mario solo puede saltar directamente de $0$ a $n + 1$.
 #    En el sexto caso de prueba del ejemplo, Mario puede elegir $d = 1$ y saltar $2$ veces hacia la derecha.
-

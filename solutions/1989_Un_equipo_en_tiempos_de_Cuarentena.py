@@ -16,7 +16,7 @@
 #   Ayuda
 #    Para el primer problema que les dan en el concurso, Daniel y Tonny están seguros de cómo resolver el problema, entonces este problema se codificara. Para el segundo problema sólo Alexander está seguro de la solución, no es suficiente para codificar. Para el tercer problema los tres saben cómo resolver el problema, esto significa que también este problema se codificara. Para el cuarto problema ninguno está seguro de la solución, no es suficiente para codificar. Por lo tanto los tres amigos sólo codificarán dos problemas (el primero y el tercero).
 #    Para el cuarto problema ninguno está seguro de la solución, no es suficiente para codificar.
-s=0
+s = 0
 for _ in range(int(input())):
-    s+=(sum(map(int,input().split()))>1)
+    s += sum(map(int, input().split())) > 1
 print(s)

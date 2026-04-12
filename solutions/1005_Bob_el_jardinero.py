@@ -18,8 +18,10 @@
 
 import math
 
+
 def round2(n):
     return math.floor(n * 100 + 0.5) / 100
+
 
 T = int(input())
 

@@ -21,4 +21,3 @@
 #    SI 6NOSI 2
 #   Ayuda
 #    Acumular un vector B de derecha a izquierda la suma del vector V, luego pregunta si V[i] >= B[i + 1]
-

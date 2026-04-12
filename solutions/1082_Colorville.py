@@ -28,4 +28,3 @@
 #   Ejemplo Salida
 #    Player 1 won after 7 cards.Player 2 won after 4 cards.No player won after 6 cards.
 #   Ayuda
-

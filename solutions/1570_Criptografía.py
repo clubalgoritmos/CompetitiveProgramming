@@ -15,6 +15,7 @@
 #   Ayuda
 #    Divide y Vencerás
 
+
 def fast_modular_exponentiation(b, e, m):
     res = 1
     b %= m
@@ -27,6 +28,7 @@ def fast_modular_exponentiation(b, e, m):
 
     return res
 
+
 for _ in range(int(input())):
-    b,e,m = map(int, input().split())
+    b, e, m = map(int, input().split())
     print(fast_modular_exponentiation(b, e, m))

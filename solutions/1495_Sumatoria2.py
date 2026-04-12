@@ -26,16 +26,16 @@ s = 0
 
 fibo = [1, 1]
 for i in range(2, n):
-    fibo.append(fibo[i-1]+fibo[i-2])
-tribo = [1,3,6]
+    fibo.append(fibo[i - 1] + fibo[i - 2])
+tribo = [1, 3, 6]
 for i in range(3, n):
-    tribo.append(tribo[i-1]+tribo[i-2]+tribo[i-3])
+    tribo.append(tribo[i - 1] + tribo[i - 2] + tribo[i - 3])
 primos = [1]
 for i in range(2, n):
-    primos.append(primos[i-1]+i)
+    primos.append(primos[i - 1] + i)
 
-while i<n:
-    s += tribo[i]*x**(primos[i])/fibo[i]
+while i < n:
+    s += tribo[i] * x ** (primos[i]) / fibo[i]
     i += 1
 
 print("{.:2f}".format(s))

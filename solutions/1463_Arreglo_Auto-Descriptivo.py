@@ -48,16 +48,19 @@
 #    Todos los demás A[i] son iguales a cero ya que nunca aparecen en el arreglo..
 #    En el segundo ejemplo de salida se ve que no existe ningún posible arreglo auto descriptivo de tamaño 1, lo únicos candidatos son {0} el cual no es posible ya que A[0]=0 se contradice ya que la cantidad de 0's es en realidad 1 y en el arreglo {1} la posición 1 no existe. Por lo tanto se imprime -1.
 
-#no funcioan
+# no funcioan
 
 N = int(input())
-A = [0]*N
-A[0]=N
+A = [0] * N
+A[0] = N
+
+
 def correcto():
     for i in range(N):
         if A[i] != A.count(i):
             return False
     return True
+
 
 if N == 1:
     print("-1")

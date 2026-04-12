@@ -28,4 +28,3 @@
 #   Ayuda
 #    En el primer ejemplo de prueba, la secuencia de los movimientos de Cimar a lo largo de la carretera de circunvalación tiene el siguiente aspecto:1 → 2 → 3 → 4 → 1 → 2 → 3.Esta es la secuencia óptima.Entonces, el necesita 6 unidades de tiempo.
 #    1 → 2 → 3 → 4 → 1 → 2 → 3
-

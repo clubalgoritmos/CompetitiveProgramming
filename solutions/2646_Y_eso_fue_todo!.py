@@ -18,4 +18,3 @@
 #    23231123
 #   Ayuda
 #    Para el 3er caso de tantas posibles respuestas con longitud maxima podemos crear la cadena “egilaealige” de longitud 11.
-

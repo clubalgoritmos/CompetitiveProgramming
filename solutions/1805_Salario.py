@@ -17,7 +17,7 @@
 #   Ayuda
 
 n = int(input())
-fun = lambda a, b: int(a)*0.88 if int(b)==1 else int(a)*0.83
+fun = lambda a, b: int(a) * 0.88 if int(b) == 1 else int(a) * 0.83
 for _ in range(n):
-  a,b = map(int, input().split(" "))
-  print('{:.2f}'.format(fun(a,b)))
+    a, b = map(int, input().split(" "))
+    print("{:.2f}".format(fun(a, b)))

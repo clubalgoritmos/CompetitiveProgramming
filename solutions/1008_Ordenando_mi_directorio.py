@@ -14,16 +14,16 @@
 
 for _ in range(int(input())):
     DIR = [input() for _ in range(int(input()))]
-    while set(DIR[-2:])!={".",".."}:
-        for i in range(len(DIR)-1):
-            if DIR[i] in {".",".."}:
+    while set(DIR[-2:]) != {".", ".."}:
+        for i in range(len(DIR) - 1):
+            if DIR[i] in {".", ".."}:
                 DIR[i], DIR[-1] = DIR[-1], DIR[i]
                 break
-        if set(DIR[-2:])=={".",".."}:
+        if set(DIR[-2:]) == {".", ".."}:
             break
 
-        for i in range(len(DIR)-1):
-            if DIR[i] in {".",".."}:
+        for i in range(len(DIR) - 1):
+            if DIR[i] in {".", ".."}:
                 DIR[i], DIR[-2] = DIR[-2], DIR[i]
                 break
     print(f"Caso {_+1}:")

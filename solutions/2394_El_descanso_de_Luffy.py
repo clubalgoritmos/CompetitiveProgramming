@@ -21,4 +21,3 @@
 #    En el primer caso de prueba, Luffy puede tener como máximo $2$ almohadas. En este caso, puede darle $2$ almohadas al tripulante en la primera cama y una almohada a cada uno de los tripulantes en la tercera y cuarta cama.
 #    En el segundo caso de prueba, Luffy puede tomar como máximo $4$ almohadas, dando $3$ almohadas a cada uno de los demás.
 #    En el tercer caso de prueba, Luffy puede tomar $3$ almohadas, dándole $2$ almohadas al tripulante en el medio y una almohada al tripulante en la tercera cama.
-

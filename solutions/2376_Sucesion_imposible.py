@@ -32,17 +32,19 @@ i = 0
 lastprime = 1
 result = []
 
+
 def nextprime(n):
     while True:
         n += 1
-        for i in range(2,n):
+        for i in range(2, n):
             if n % i == 0:
                 break
         else:
             return n
 
+
 while count < N:
-    for _ in range(-1,i):
+    for _ in range(-1, i):
         if count < N:
             result.append(str(i))
             count += 1
@@ -52,8 +54,8 @@ while count < N:
         if count >= N:
             continue
         lastprime = nextprime(lastprime)
-        count+=1
+        count += 1
         result.append(str(lastprime))
     i += 1
 
-print(', '.join(result))
+print(", ".join(result))

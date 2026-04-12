@@ -25,4 +25,3 @@
 #   Ayuda
 #    Las personas que apilan rectangulos de tipo 1 puede formar un bloque de tamaño 2.
 #    Las personas que apilan rectangulos de tipo $2$ pueden formar los siguientes bloques 3, 6, 9.
-

@@ -22,21 +22,24 @@
 s = 0
 fibo = [0, 1]
 
+
 def fibonacci(n):
-    if n<len(fibo):
+    if n < len(fibo):
         return fibo[n]
     else:
-        fibo.append(fibonacci(n-1)+fibo[n-2])
+        fibo.append(fibonacci(n - 1) + fibo[n - 2])
         return fibo[n]
+
 
 def generate_series(n):
     series = []
-    for i in range(1, n+1):
-        series.extend([i]*i)
+    for i in range(1, n + 1):
+        series.extend([i] * i)
     return series
+
 
 import math
 
 for i in range(int(input())):
-    s+=math.factorial(fibonacci(i+1))/generate_series(i+1)[i]
+    s += math.factorial(fibonacci(i + 1)) / generate_series(i + 1)[i]
 print("{:.2f}".format(s))

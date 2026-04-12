@@ -23,7 +23,7 @@
 #   Ayuda
 
 for _ in range(int(input())):
-    N,C = map(int,input().split())
+    N, C = map(int, input().split())
     ubica = []
     for _ in range(N):
         ubica.append(int(input()))

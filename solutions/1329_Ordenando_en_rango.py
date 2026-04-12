@@ -14,7 +14,7 @@
 #    3 1 2 4 1 2 5 6 7 0
 #   Ayuda
 
-N,I,J = map(int,input().split())
-A = list(map(int,input().split()))
-x = A[:I] + sorted(A[I:J+1]) + A[J+1:]
+N, I, J = map(int, input().split())
+A = list(map(int, input().split()))
+x = A[:I] + sorted(A[I : J + 1]) + A[J + 1 :]
 print(*x)

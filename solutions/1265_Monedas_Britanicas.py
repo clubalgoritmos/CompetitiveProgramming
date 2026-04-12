@@ -17,9 +17,10 @@
 #    Para resolver el problema debe colocar su solución dentro de;
 
 import sys
+
 for i in sys.stdin:
-  i = int(i)
-  l = i//(20*12)
-  c = (i%(20*12))//12
-  p = ((i%(20*12))%12)
-  print((l,c,p))
+    i = int(i)
+    l = i // (20 * 12)
+    c = (i % (20 * 12)) // 12
+    p = (i % (20 * 12)) % 12
+    print((l, c, p))

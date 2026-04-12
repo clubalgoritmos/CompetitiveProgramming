@@ -18,6 +18,7 @@
 #    19.503.507490.009926.24987.509434594.7947.50
 #   Ayuda
 
+
 def next_prime(n):
     while True:
         n += 1
@@ -27,15 +28,16 @@ def next_prime(n):
         else:
             return n
 
+
 while True:
     try:
         lastprime = 1
         S = 0
-        n,x = map(int,input().split())
+        n, x = map(int, input().split())
         for i in range(n):
 
-            S+=lastprime*(x**i)/lastprime
+            S += lastprime * (x**i) / lastprime
             lastprime = next_prime(lastprime)
-        print("{:.2f}".format(S)) 
+        print("{:.2f}".format(S))
     except EOFError:
         break

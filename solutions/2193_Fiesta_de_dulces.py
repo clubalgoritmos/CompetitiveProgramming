@@ -24,4 +24,3 @@
 #    EJEMPLO ENTRADA 2                  EJEMPLO SALIDA 2
 #    5 1 1                              NO
 #    4 3 2
-

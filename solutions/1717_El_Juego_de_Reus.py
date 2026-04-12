@@ -29,13 +29,14 @@
 #    Para el 5to Caso de prueba inicialmente la pantalla muestra un número $1$ (numero inicial $A$) pulsando el botón que agrega una unidad, como resultado la pantalla mostrara $2$ (el numero requerido $B$), solo se necesitó presionar una vez uno de los botones, entonces la respuesta es $1$.
 #    Para el 5to Caso de prueba inicialmente la pantalla muestra un número $1$ (numero inicial $A$) pulsando el botón que agrega una unidad, como resultado la pantalla mostrara $2$ (el numero requerido $B$), solo se necesitó presionar una vez uno de los botones, entonces la respuesta es $1$.
 
-#no funciona
+# no funciona
 for _ in range(int(input())):
-    a,b = input().split()
-    s=0
-    for i, x in enumerate(zip(a,b)):
-        ai,bi=map(int,x)
-        u = abs(ai-bi)
-        if u==0: u=1
-        s+=u
+    a, b = input().split()
+    s = 0
+    for i, x in enumerate(zip(a, b)):
+        ai, bi = map(int, x)
+        u = abs(ai - bi)
+        if u == 0:
+            u = 1
+        s += u
     print(s)

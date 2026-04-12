@@ -19,5 +19,5 @@ S = 0
 N = int(input())
 for _ in range(N):
     S += x
-    x *= 3/4
+    x *= 3 / 4
 print("{:.4f}".format(S))

@@ -15,4 +15,3 @@
 #   Ejemplo Salida
 #    Cuadro 1M**3*3*7*3*7Cuadro 2M**3*3*7*3*7Cuadro 3M**3*3*7
 #   Ayuda
-

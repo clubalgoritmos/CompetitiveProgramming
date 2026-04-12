@@ -18,7 +18,7 @@
 #    Todos los números naturales son considerados para este ejercicio
 while True:
     try:
-        c=0
+        c = 0
         for _ in range(int(input())):
             n = input()
             if n == n[::-1]:

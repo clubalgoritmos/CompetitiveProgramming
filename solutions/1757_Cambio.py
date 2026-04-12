@@ -21,4 +21,3 @@
 #   Ejemplo Salida
 #    Existe solo 1 manera de producir 0.10 Bs de cambio.Existen 8 maneras de producir 0.90 Bs de cambio.Existen 28 maneras de producir 1.70 Bs de cambio.No existe forma de producir cambio exacto.
 #   Ayuda
-

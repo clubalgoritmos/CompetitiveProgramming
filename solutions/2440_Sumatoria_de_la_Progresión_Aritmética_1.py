@@ -16,4 +16,4 @@
 #   Ayuda
 
 N = int(input())
-print(N*(30 - 10*(N-1)//2))
+print(N * (30 - 10 * (N - 1) // 2))

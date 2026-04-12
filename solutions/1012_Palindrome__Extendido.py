@@ -17,6 +17,7 @@
 #    2da div. 2012 UMSA
 #    para no adicionar extra consderar que si existen palindromo en una subcadena descartando un o varios caracteres a la izquierda, luego de tener uno o no exista alguno ir añadiendo carcateres al final iguales a los q estan en el paralelo izquierdo
 
+
 def is_palindrome(s):
     left, right = 0, len(s) - 1
     while left < right:
@@ -26,9 +27,10 @@ def is_palindrome(s):
         right -= 1
     return True
 
+
 while True:
     S = input()
-    if S=="END":
+    if S == "END":
         break
     if is_palindrome(S):
         print(S)

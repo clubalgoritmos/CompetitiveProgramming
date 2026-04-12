@@ -17,12 +17,12 @@
 
 n = int(input())
 i = 1
-fibo = [1,0]
-while i<=n:
-    if i%2==0:
+fibo = [1, 0]
+while i <= n:
+    if i % 2 == 0:
         print(i)
     else:
-        fibo.append(fibo[-1]+fibo[-2])
+        fibo.append(fibo[-1] + fibo[-2])
         fibo.pop(0)
         print(fibo[-1])
-    i+=1
+    i += 1

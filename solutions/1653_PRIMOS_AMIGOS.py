@@ -15,10 +15,11 @@
 #   Ayuda
 
 import math
+
 while True:
     try:
-        a, b = map(int,input().split())
-        if math.gcd(a,b)==1:
+        a, b = map(int, input().split())
+        if math.gcd(a, b) == 1:
             print("PRIMOS AMIGOS")
             continue
         print("PRIMOS ENEMIGOS")

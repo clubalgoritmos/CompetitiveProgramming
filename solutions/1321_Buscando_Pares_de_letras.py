@@ -16,4 +16,3 @@
 #    ----------co 5la 4----------co 10oc 5----------
 #   Ayuda
 #    utilizar metodos de cadenas para una mejor busqueda
-

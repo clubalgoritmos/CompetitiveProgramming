@@ -18,4 +18,4 @@
 
 for _ in range(int(input())):
     N = int(input())
-    print(2**(N-1))
+    print(2 ** (N - 1))

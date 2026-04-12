@@ -17,6 +17,6 @@
 
 for _ in range(int(input())):
     S = input()
-    a,b = input().split()
-    #print(S.translate(str.maketrans(a,b)))
+    a, b = input().split()
+    # print(S.translate(str.maketrans(a,b)))
     print(*S.split(a), sep=b)

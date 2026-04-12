@@ -39,9 +39,10 @@
 #    En el primer caso de prueba, se puede utilizar la subcadena $123$.En el segundo caso de prueba, se puede utilizar la subcadena $213$.En el tercer caso de prueba, se puede utilizar la subcadena $1223$.En el cuarto caso de prueba, se puede utilizar la subcadena $3221$.En el quinto caso de prueba, no hay carácter $3$ en $s$.En el sexto caso de prueba, no hay carácter $1$ en $s$.En el séptimo caso de prueba, se puede utilizar la subcadena $3112$.
 #    En el primer caso de prueba, se puede utilizar la subcadena $123$.En el segundo caso de prueba, se puede utilizar la subcadena $213$.En el tercer caso de prueba, se puede utilizar la subcadena $1223$.En el cuarto caso de prueba, se puede utilizar la subcadena $3221$.En el quinto caso de prueba, no hay carácter $3$ en $s$.En el sexto caso de prueba, no hay carácter $1$ en $s$.En el séptimo caso de prueba, se puede utilizar la subcadena $3112$.
 
+
 def find_substring(S):
     start = 0
-    min_length = float('inf')
+    min_length = float("inf")
     count = {str(i): 0 for i in range(1, 4)}
     distinct_count = 0
 
@@ -59,8 +60,9 @@ def find_substring(S):
                     distinct_count -= 1
             start += 1
 
-    return min_length if min_length != float('inf') else 0
+    return min_length if min_length != float("inf") else 0
+
 
 for _ in range(int(input())):
     S = input()
-    print(find_substring(S))    
+    print(find_substring(S))

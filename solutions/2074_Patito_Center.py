@@ -18,17 +18,17 @@
 
 while True:
     try:
-        a,b,c = map(int,input().split(":"))
-        x,y,z = map(int,input().split(":"))
-        if a>x:
-            x+=24
-        if b>y:
-            y+=60
-            x-=1
-        if c>z:
-            z+=60
-            y-=1
-        if (x-a)*3600+(y-b)*60+z-c>10800:
+        a, b, c = map(int, input().split(":"))
+        x, y, z = map(int, input().split(":"))
+        if a > x:
+            x += 24
+        if b > y:
+            y += 60
+            x -= 1
+        if c > z:
+            z += 60
+            y -= 1
+        if (x - a) * 3600 + (y - b) * 60 + z - c > 10800:
             print("Si")
         else:
             print("No")

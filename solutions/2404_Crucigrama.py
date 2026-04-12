@@ -19,4 +19,3 @@
 #   Ejemplo Salida
 #    NEWTON (3, 0) -HWILSON (4, 3) -DUNION (8, 0) -HLUCAS (1, 6) -V
 #   Ayuda
-

@@ -15,14 +15,14 @@
 #    NOkm: 0.00 m: 0.00 cm: 1.41
 #   Ayuda
 
-x1,y1,x2,y2 = map(int,input().split())
-d = ((x2-x1)**2+(y2-y1)**2)**.5
-if d>100:
+x1, y1, x2, y2 = map(int, input().split())
+d = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+if d > 100:
     print("SI")
 else:
     print("NO")
-m = d//100
-d = d%100
-km = m//1000
-m = m%1000
+m = d // 100
+d = d % 100
+km = m // 1000
+m = m % 1000
 print(f"km: {km:.2f} m: {m:.2f} cm: {d:.2f}")

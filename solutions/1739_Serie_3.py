@@ -24,10 +24,10 @@ for _ in range(int(input())):
     b = 0
     v = []
     for i in range(N):
-        if i%2==0:
-            a+=b
+        if i % 2 == 0:
+            a += b
             v.append(a)
         else:
-            b=sum(int(digit) for digit in str(a))
+            b = sum(int(digit) for digit in str(a))
             v.append(b)
-    print(*v,sep="  ")
+    print(*v, sep="  ")

@@ -15,4 +15,3 @@
 #   Ejemplo Salida
 #    x^5 + 21x^4 - 331x^3 + x - 1-54x^2 + 5x
 #   Ayuda
-

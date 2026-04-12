@@ -24,7 +24,7 @@ sc = list(input())
 sc.insert(0, "a")
 sc.append("a")
 y = 0
-for ab in range(1, len(sc)-1):
-    if sc[ab] == "a" and (sc[ab-1] == "a" or sc[ab+1] == "a"):
-        y = y+1
+for ab in range(1, len(sc) - 1):
+    if sc[ab] == "a" and (sc[ab - 1] == "a" or sc[ab + 1] == "a"):
+        y = y + 1
 print(y)

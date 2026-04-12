@@ -21,4 +21,3 @@
 #    12 4 as mari33 234 dlfk maria1 2 perez alan1 3 perez alan12 23 quisp juan1 2 quisp jaun1 2 qup juan
 #   Ayuda
 #    2do. ParcialProgramación IIIII/2023
-

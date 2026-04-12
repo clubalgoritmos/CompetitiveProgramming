@@ -14,4 +14,3 @@
 #    34
 #   Ayuda
 #    Se puede hacer todos los cambios posibles y contar cuantos puntos fijos existen para un cierto tipo de cambio
-

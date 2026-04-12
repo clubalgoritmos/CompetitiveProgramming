@@ -15,6 +15,7 @@
 #   Ayuda
 #    Si x es divisible por i : se denota como x%i==0
 
+
 def sieve(n):
     primes = [True] * (n + 1)
     primes[0] = primes[1] = False
@@ -24,14 +25,16 @@ def sieve(n):
                 primes[j] = False
     return primes
 
+
 def prefix_primes(primes):
     prefix = [0] * len(primes)
     for i in range(1, len(primes)):
-        prefix[i] = prefix[i-1] + primes[i]
+        prefix[i] = prefix[i - 1] + primes[i]
     return prefix
+
 
 primes = sieve(10**7)
 prefix = prefix_primes(primes)
 for _ in range(int(input())):
     a, b = map(int, input().split())
-    print(prefix[b] - (prefix[a-1] if a > 0 else 0))
+    print(prefix[b] - (prefix[a - 1] if a > 0 else 0))

@@ -17,12 +17,12 @@
 #   Ayuda
 #    puede realizar la consulta en la misma matriz analizando las posiciones
 
-for _  in range(int(input())):
+for _ in range(int(input())):
     n = int(input())
     M = [list(map(int, input().split())) for _ in range(n)]
     sw = False
     for i in range(n):
-        for j in range(i,n):
+        for j in range(i, n):
             if M[i][j] != M[j][i]:
                 print("No simetrica")
                 sw = True

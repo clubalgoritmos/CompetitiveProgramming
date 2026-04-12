@@ -23,4 +23,4 @@ for _ in range(t):
     else:
         pago = 40 * salario + (horas - 40) * salario * 1.5
 
-    print("{:.2f}".format(pago))  
+    print("{:.2f}".format(pago))

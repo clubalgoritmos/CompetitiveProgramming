@@ -18,7 +18,7 @@
 #    SISISINOSISINOSINONO
 #   Ayuda
 
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 v = input()
 for _ in range(m):
     x = input()

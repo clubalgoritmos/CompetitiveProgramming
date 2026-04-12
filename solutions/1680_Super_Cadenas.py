@@ -21,4 +21,3 @@
 #   Ayuda
 #    para el primer ejemplo: la unica cadena posible es YY
 #    para el segundo ejemplo: las cadenas posibles son: YXYX, YXYY, YYYX, YYXY, YYYY.
-

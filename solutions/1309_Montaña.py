@@ -28,9 +28,9 @@ for i in range(1, N):
         if A[i] > A[j]:
             inc[i] = max(inc[i], inc[j] + 1)
 
-for i in range(N-2, -1, -1):
-    for j in range(N-1, i, -1):
+for i in range(N - 2, -1, -1):
+    for j in range(N - 1, i, -1):
         if A[i] > A[j]:
             dec[i] = max(dec[i], dec[j] + 1)
 
-print(max(inc)+ max(dec)-1)
+print(max(inc) + max(dec) - 1)

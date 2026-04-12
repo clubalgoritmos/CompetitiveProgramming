@@ -16,18 +16,18 @@
 #    48927
 #   Ayuda
 
-#Programación
-#for _ in range(int(input())):
+# Programación
+# for _ in range(int(input())):
 #  x, n = (int(x) for x in input().split(' '))
 #  s = 1
 #  for i in range(1, n+1):
 #    s = s * (x**(i/n))
 #  print(round(s))
 
-#Analisis
+# Analisis
 for _ in range(int(input())):
-  x, n = (int(x) for x in input().split(' '))
-  s = 1
-  for i in range(1, n):
-    s+=i/n
-  print(round(x**(s)))
+    x, n = (int(x) for x in input().split(" "))
+    s = 1
+    for i in range(1, n):
+        s += i / n
+    print(round(x ** (s)))

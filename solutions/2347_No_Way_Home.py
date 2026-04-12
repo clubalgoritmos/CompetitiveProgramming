@@ -28,10 +28,10 @@ for _ in range(int(input())):
     A = list(map(int, input().split()))
     c = 0
     for a in A:
-        if a-25 > c:
+        if a - 25 > c:
             print("NO")
             break
         c += 25
-        c -= a-25
+        c -= a - 25
     else:
         print("SI")

@@ -24,4 +24,3 @@
 #   Ejemplo Salida
 #    7 corriente24 abundante corriente28 perfecto220 abundante romántico95 inspirador276 abundante indefinido2856 abundante amigable2 corriente
 #   Ayuda
-

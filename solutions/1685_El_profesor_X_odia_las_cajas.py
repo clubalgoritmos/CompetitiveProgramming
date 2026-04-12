@@ -37,4 +37,3 @@
 #    Segundo 4: El primer alumno avanza a la tercera pila y el segundo alumno levanta una caja de la tercera pila
 #    Segundo 5: El primer o segundo alumno levantan la ultima caja de la tercera pila
 #    ... Y asi queda vacio el pasillo en 5 segundos...
-

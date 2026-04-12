@@ -20,7 +20,7 @@ for _ in range(int(input())):
     start = input()
     while True:
         try:
-            a,b = input()
+            a, b = input()
             if a not in graph:
                 graph[a] = set()
             if b not in graph:
@@ -30,10 +30,10 @@ for _ in range(int(input())):
         except Exception as exp:
             break
     visited = set()
-    c=0
+    c = 0
     for k in graph:
         if not k in visited:
-            c+=1
+            c += 1
             visited.add(k)
             stack = [k]
             while stack:

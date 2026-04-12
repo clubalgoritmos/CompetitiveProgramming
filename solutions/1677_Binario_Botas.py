@@ -16,4 +16,3 @@
 #    118
 #   Ayuda
 #    Para el ejemplo 100100011      Estos son los subnumeros que cumplen la condicion.   100100011  1 10  2 100  3 10010  4 100100  5 1001000  6  10  7  100  8  1000
-

@@ -19,4 +19,3 @@
 #    la matriz del ejemplo anterior se ve de la siguiente manera:
 #    1 2 3
 #    2 4 6
-

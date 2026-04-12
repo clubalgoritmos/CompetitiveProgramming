@@ -22,4 +22,3 @@
 #    En el primer caso de prueba, ya te encuentras en la celda final, por lo que no gastas rupias (0 rupias).
 #    En el segundo, tercer y cuarto caso de prueba, hay dos caminos desde (1,1) hasta (2,2): (1,1) → (1,2) → (2,2) o (1,1) → (2,1) → (2,2). Ambos cuestan 1+2=3 rupias, por lo que es la única cantidad de dinero que puedes gastar.
 #    En el quinto caso de prueba, hay una única ruta desde (1,1) hasta (1,4) y cuesta 1+1+1=3 rupias.
-

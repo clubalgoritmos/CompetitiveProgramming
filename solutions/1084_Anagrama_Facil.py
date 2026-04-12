@@ -14,9 +14,9 @@
 #    1 0 1 1 1 1 11 1 2 0 2 2
 #   Ayuda
 
-for _  in range(int(input())):
+for _ in range(int(input())):
     N = int(input())
-    v = {input():0 for _ in range(N)}
+    v = {input(): 0 for _ in range(N)}
     for k in v:
-        v[k] = sum([1 for i in v if sorted(i)==sorted(k)])-1
+        v[k] = sum([1 for i in v if sorted(i) == sorted(k)]) - 1
     print(*v.values())

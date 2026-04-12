@@ -16,4 +16,3 @@
 #   Ejemplo Salida
 #    4 : maoa2 : bb16 : e  huawei enaos25 :  peor er es la mejor aer.
 #   Ayuda
-

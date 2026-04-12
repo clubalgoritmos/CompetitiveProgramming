@@ -14,8 +14,9 @@
 #    3132155
 #   Ayuda
 
-#hallando fibonacci
+# hallando fibonacci
 import sys
+
 f = []
 for i in range(0, 100):
     f.append(0)
@@ -31,6 +32,6 @@ def fibo(n):
         return f[n]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for n in sys.stdin:
         print(fibo(int(n)))

@@ -16,4 +16,3 @@
 #   Ejemplo Salida
 #    ....x.xxxxx.xxxxx.xxxxx.x...x.xxxxx.xxxxx....x.....x.....x.x.....x...x.x.........x....x.....x.....x.x.....x...x.x.........x....x.xxxxx.xxxxx.xxxxx.xxxxx.xxxxx.....x....x.x.........x.....x.....x.....x.....x....x.x.........x.....x.....x.....x.....x....x.xxxxx.xxxxx.xxxxx.....x.xxxxx.....x
 #   Ayuda
-

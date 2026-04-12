@@ -19,13 +19,15 @@
 
 import math
 
+
 def egyf(x, y):
     r = []
     while x != 0:
-        z = math.ceil(y/x)
+        z = math.ceil(y / x)
         r.append(z)
         x, y = -y % x, y * z
     return r
+
 
 for _ in range(int(input())):
     x, y = map(int, input().split())

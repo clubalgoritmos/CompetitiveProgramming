@@ -20,4 +20,3 @@
 #    32 1
 #   Ayuda
 #    En el ejemplo, un bocadillo de tamaño3cayó el primer día y los residentes lo colocaron inmediatamente.En el segundo día, un bocadillo de tamaño1cayó y los residentes no pudieron colocarlo porque les faltaba el bocadillo de tamaño2.El tercer díacayóun bocadillo de tamaño2y los residentes lo colocaron inmediatamente.Inmediatamente después colocaron el bocadillo de tamaño1que había caído antes.
-

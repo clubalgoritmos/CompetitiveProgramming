@@ -18,4 +18,3 @@
 #   Ejemplo Salida
 #    Z 1TECO 1PEDRO 1OHCUL 1JORGE 1BLASS 1AQUILES 1Z 3
 #   Ayuda
-

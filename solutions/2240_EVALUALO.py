@@ -21,8 +21,8 @@
 N = int(input())
 S = []
 for i in range(N):
-    if i%2==0:
-        S.append(i+2)
+    if i % 2 == 0:
+        S.append(i + 2)
         continue
     S.append(-i)
 print(*S, sep="+", end="=")

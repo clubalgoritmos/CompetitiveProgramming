@@ -20,4 +20,4 @@ for _ in range(int(input())):
     if "96" in input():
         print("APLAZADO!")
         continue
-    print("TE SALVAS :D") 
+    print("TE SALVAS :D")

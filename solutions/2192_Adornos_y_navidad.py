@@ -22,4 +22,3 @@
 #    Nota
 #    En el primer ejemplo, la respuesta es 7+8+9=24
 #    En el segundo ejemplo, la respuesta es 2+3+4=9
-

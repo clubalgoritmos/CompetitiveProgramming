@@ -25,4 +25,3 @@
 #    En el primer caso de prueba, puedes moverte una unidad a la derecha, puedes usar el portal en el índice 1 y teletransportarte al punto 0, luego te mueves dos unidades a la derecha y usar el portal en el índice 2. Te quedas con 6−1−1−2−1 = 1 monedas entonces no tienes suficientes monedas para usar otro portal. Haz utilizado dos portales, por lo que la respuesta es dos.
 #    En el segundo caso de prueba, vas cuatro unidades a la derecha y usas el portal para ir a 0, luego vas 6 unidades a la derecha y usas el portal en el índice 6 para ir a 0. El costo total será 4+6+6+4=20. Te quedas con 12 monedas, pero no es suficiente para llegar a cualquier otro portal y usarlo, por lo que la respuesta es 2.
 #    En el tercer caso de prueba, no tienes suficientes monedas para usar ningún portal, por lo que la respuesta es cero.
-

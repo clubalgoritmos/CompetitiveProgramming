@@ -31,7 +31,7 @@
 #   Ayuda
 #    se sugiere usar un vector de caracteres para su facil rotacion
 
-S,N = input().split()
+S, N = input().split()
 N = int(N) % len(S)
 if N == 0:
     print(S)

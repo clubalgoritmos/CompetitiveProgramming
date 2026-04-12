@@ -26,6 +26,7 @@
 #    181411161
 #   Ayuda
 
+
 def collatz(n):
     pasos = 0
     while n != 1:
@@ -36,7 +37,8 @@ def collatz(n):
         pasos += 1
     return pasos
 
-for _ in range(int(input())): # pylint: disable=unused-variable
+
+for _ in range(int(input())):  # pylint: disable=unused-variable
     print(collatz(int(input())))
 """
 for i in range(int(input())):

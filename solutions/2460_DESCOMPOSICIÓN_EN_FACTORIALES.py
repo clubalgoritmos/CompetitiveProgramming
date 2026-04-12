@@ -25,7 +25,7 @@
 #    2
 #   Ayuda
 
-n=int(input())
+n = int(input())
 factoriales = [1]
 i = 1
 while factoriales[-1] <= n:

@@ -15,4 +15,4 @@
 #    13
 #   Ayuda
 N = int(input())
-print(-7+4*(N-1))
+print(-7 + 4 * (N - 1))

@@ -35,9 +35,8 @@
 
 for _ in range(int(input())):
     N = int(input())
-    A = list(map(int,input().split()))
+    A = list(map(int, input().split()))
     for x in set(A):
-        if A.count(x)==1:
+        if A.count(x) == 1:
             print(A.index(x))
             break
-    

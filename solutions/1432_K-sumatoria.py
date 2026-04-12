@@ -26,8 +26,8 @@
 #    36
 #   Ayuda
 
-X,K,M = map(int,input().split())
+X, K, M = map(int, input().split())
 S = 0
-for i in range(1,X+1):
-    S+=(K*i%M)
-print(S%M)
+for i in range(1, X + 1):
+    S += K * i % M
+print(S % M)

@@ -24,7 +24,7 @@
 # numeros Balanceados
 import sys
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for line in sys.stdin:
         n = int(line)
         """Con esto fragmento lo que hacemos es leer las dos lineas
@@ -57,6 +57,6 @@ if __name__ == '__main__':
                     break
                 else:
                     ry += 1
-        #son muchos for para esto
-        #y todo por que la entrada no esta hecha para python :v
+        # son muchos for para esto
+        # y todo por que la entrada no esta hecha para python :v
         print((rx + 1) * (ry + 1))

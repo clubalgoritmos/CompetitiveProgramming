@@ -40,7 +40,7 @@ direccion = "abajo"
 for i in range(1, n * n + 1):
     # Se coloca el número en la posición actual de la matriz
     matriz[fila][columna] = i
-    
+
     # Dependiendo de la dirección actual, se mueve hacia la siguiente posición
     if direccion == "arriba":
         # Si se está avanzando hacia arriba, se verifica si se ha llegado al borde superior o derecho de la matriz

@@ -19,4 +19,3 @@
 #    443
 #   Ayuda
 #    El problema pide allar una subsequencia del vector tal que la suma sea maxima, podemos ir acumulando la sumas de mientras sea mayor a 0, si la suma se vuelve negativa entonces no nos conviene tomar esa subsecuencia
-

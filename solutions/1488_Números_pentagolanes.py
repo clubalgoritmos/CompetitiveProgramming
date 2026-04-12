@@ -15,18 +15,18 @@
 #   Ejemplo Entrada
 #    5
 #   Ejemplo Salida
-#    1 5 12 22 35 
+#    1 5 12 22 35
 #   Ayuda
 
-pentagonal_number = lambda n: (3*n*n - n) // 2
+pentagonal_number = lambda n: (3 * n * n - n) // 2
 memo = []
 
 while True:
     try:
         N = int(input())
-        if N > len(memo)-1:
+        if N > len(memo) - 1:
             for i in range(len(memo), N):
-                memo.append(pentagonal_number(i+1))
+                memo.append(pentagonal_number(i + 1))
         print(" ".join(map(str, memo)))
     except EOFError:
         break

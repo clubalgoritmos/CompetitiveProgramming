@@ -36,4 +36,3 @@
 #   Ayuda
 #    El caso de entrada tiene 5 cuadruplas que su suma es igual a 0 : $(-45,-27,42,30), (26,30,-10,-46), (-32,22,56,-46), (-32,30,-75,77), (-32,-54,56,30)$.
 #    Se puede hallar la solucion si probamos todas las combinaciones de forma recursiva
-

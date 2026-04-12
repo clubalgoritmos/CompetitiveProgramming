@@ -23,7 +23,7 @@ while True:
         k = int(k)
         for s in S:
             if s.isalpha():
-                print(chr((ord(s)-97+k)%26+65), end="")
+                print(chr((ord(s) - 97 + k) % 26 + 65), end="")
             elif s != "_":
                 print(s, end="")
             else:

@@ -25,15 +25,15 @@
 #    2da div. 2013 UMSA
 
 while True:
-    N,M = map(int,input().split())
-    if N==0 and M==0:
+    N, M = map(int, input().split())
+    if N == 0 and M == 0:
         break
-    graph = {i:set() for i in range(1,N+1)}
+    graph = {i: set() for i in range(1, N + 1)}
     for _ in range(M):
-        a,b = map(int,input().split())
+        a, b = map(int, input().split())
         graph[a].add(b)
-    for i in range(1,N+1):
-        visited = [False for _ in range(N+1)]
+    for i in range(1, N + 1):
+        visited = [False for _ in range(N + 1)]
         stack = [i]
         while stack:
             node = stack.pop()

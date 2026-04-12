@@ -31,4 +31,3 @@
 #    en el primer caso la audiencia automaticamente sin la necesidad de agregar a nadie,el primer miembro de la audiencia con Si=0 se parara , luego al audiencia con Si=1 se parara tambien y asi sucecivamente.
 #    En el caso 2 se necesita invitar a un amigo para que toda la audiencia se ponga de pie.
 #    En el caso 3  una optima solucion es invitar a dos personas mas con Si=2
-

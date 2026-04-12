@@ -40,7 +40,7 @@ for _ in range(t):
     nn = ""
     sw = True
     for i in range(len(cad)):
-        if cad[i] == ' ':
+        if cad[i] == " ":
             nn = nn + cad[i]
         else:
             if sw:

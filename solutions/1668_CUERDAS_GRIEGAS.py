@@ -19,4 +19,3 @@
 #    2221
 #   Ayuda
 #    En el caso de una cuerda de longitud 10 se puede hacer un pentagono de lado 2 y un decagono de lado 1
-

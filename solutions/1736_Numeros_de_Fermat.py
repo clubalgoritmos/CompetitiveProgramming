@@ -17,6 +17,6 @@
 #   Ayuda
 
 N = int(input())
-fermat = lambda n: 2**(2**n)+1
+fermat = lambda n: 2 ** (2**n) + 1
 for i in range(N):
-    print(fermat(i), end=" " if i < N-1 else "\n")
+    print(fermat(i), end=" " if i < N - 1 else "\n")

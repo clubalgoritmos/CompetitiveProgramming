@@ -21,7 +21,7 @@
 
 while True:
     try:
-        n=input().strip()
-        print(sum(map(int,filter(lambda x: int(x)%2==0,n))))
+        n = input().strip()
+        print(sum(map(int, filter(lambda x: int(x) % 2 == 0, n))))
     except Exception as e:
         break

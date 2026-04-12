@@ -18,7 +18,7 @@
 #   Ayuda
 
 N = int(input())
-M = [[(i+j) & 1 for i in range(N)] for j in range(1,N+1)]
+M = [[(i + j) & 1 for i in range(N)] for j in range(1, N + 1)]
 
 for v in M:
     print(*v, sep="")

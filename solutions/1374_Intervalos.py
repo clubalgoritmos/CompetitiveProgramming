@@ -20,5 +20,5 @@
 #    [20,30]
 #   Ayuda
 
-a1,b1,a2,b2 = map(int, input().split())
-print(f"[{max(a1,a2)},{min(b1,b2)}]" if max(a1,a2) <= min(b1,b2) else "[]")
+a1, b1, a2, b2 = map(int, input().split())
+print(f"[{max(a1,a2)},{min(b1,b2)}]" if max(a1, a2) <= min(b1, b2) else "[]")

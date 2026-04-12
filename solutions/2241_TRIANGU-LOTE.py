@@ -19,18 +19,19 @@
 #    https://es.wikipedia.org/wiki/Fórmula_de_Herón
 
 import math
+
 n = int(input())
 
-for i in range(n//3):
+for i in range(n // 3):
     try:
         a = int(input())
         b = int(input())
         c = int(input())
-        s = (a+b+c)/2
-        area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+        s = (a + b + c) / 2
+        area = math.sqrt(s * (s - a) * (s - b) * (s - c))
         if area > 0:
             print("Area: {:.6f}".format(area))
         else:
             raise ValueError
     except ValueError:
-        print("No hay area") 
+        print("No hay area")

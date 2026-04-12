@@ -15,14 +15,14 @@
 #   Ayuda
 while True:
     try:
-        x,y = map(int, input().split())
+        x, y = map(int, input().split())
         for i in range(x):
             for j in range(y):
-                if (i+j)%2!=0:
+                if (i + j) % 2 != 0:
                     print("X", end="")
                 else:
                     print(".", end="")
             print()
-        print("-"*10)
+        print("-" * 10)
     except EOFError:
         break

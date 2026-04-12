@@ -19,4 +19,3 @@
 #    Para el caso 3
 #    42 = 5 + 37 tiene la diferencia máxima.
 #    Se debe buscar todos los primos hasta n.
-

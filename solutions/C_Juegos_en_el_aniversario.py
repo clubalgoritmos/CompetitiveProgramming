@@ -4,4 +4,3 @@ for _ in range(int(input())):
         print("Segunda")
     else:
         print("Primera")
-      

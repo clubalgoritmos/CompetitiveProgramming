@@ -22,5 +22,5 @@
 
 N, M = map(int, input().split())
 A, B = list(map(int, input().split(" "))), list(map(int, input().split(" ")))
-for i in sorted(A+B):
-  print(i)
+for i in sorted(A + B):
+    print(i)

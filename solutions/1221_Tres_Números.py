@@ -14,4 +14,6 @@
 #    1 2 3
 #   Ayuda
 
-print(*sorted(map(int,input().split())),)
+print(
+    *sorted(map(int, input().split())),
+)

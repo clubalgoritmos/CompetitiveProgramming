@@ -18,13 +18,13 @@
 
 while True:
     try:
-        X, T, Z = map(int,input().split())
+        X, T, Z = map(int, input().split())
         X = str(X)
-        Y = X[T+1:]
-        if int(Y)%2:
-            Y = Y[(Z%len(Y)):]+Y[:(Z%len(Y))]
+        Y = X[T + 1 :]
+        if int(Y) % 2:
+            Y = Y[(Z % len(Y)) :] + Y[: (Z % len(Y))]
         else:
-            Y = Y[:(Z%len(Y))]+Y[(Z%len(Y)):]
-        print(X[:T+1],Y,sep="")
+            Y = Y[: (Z % len(Y))] + Y[(Z % len(Y)) :]
+        print(X[: T + 1], Y, sep="")
     except EOFError:
         break

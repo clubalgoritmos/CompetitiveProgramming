@@ -20,7 +20,7 @@
 #    5
 #   Ayuda
 
-#CASI FIBOS
+# CASI FIBOS
 
 line = input().split()
 modulo = int(line[1])
@@ -32,9 +32,9 @@ if n == 1:
 if n == 2:
     print(pos)
 if n > 2:
-    for i in range(3, n+1):
+    for i in range(3, n + 1):
         val = pre + pos
         pre = pos
         pos = val
 
-    print(val%modulo)
+    print(val % modulo)

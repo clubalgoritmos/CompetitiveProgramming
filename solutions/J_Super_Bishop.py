@@ -1,5 +1,7 @@
-#Memory limit
+# Memory limit
 from math import gcd
+
+
 def solve():
     n, m = map(int, input().split())
     if gcd(n, m) == 1:
@@ -24,7 +26,8 @@ def solve():
         M[x][y] = 1
         if visited == n * m or (x == 0 and y == 0 and visited > 1):
             break
-    print(n*m - visited)
+    print(n * m - visited)
+
 
 while True:
     try:

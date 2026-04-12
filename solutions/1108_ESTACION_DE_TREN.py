@@ -20,4 +20,3 @@
 #    2 13 2 13 1 5 4 2
 #   Ayuda
 #    Simular el proceso con las codiciones dadas en el problema.
-

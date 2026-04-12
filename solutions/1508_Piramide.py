@@ -20,11 +20,13 @@
 #   Ayuda
 MOD = 10**9 + 7
 
+
 def piramides(n):
     suma = 1
-    for i in range(1, n+1):
-        suma = (suma + (2**i)*(i+1)) % MOD
+    for i in range(1, n + 1):
+        suma = (suma + (2**i) * (i + 1)) % MOD
     return suma
+
 
 while True:
     try:

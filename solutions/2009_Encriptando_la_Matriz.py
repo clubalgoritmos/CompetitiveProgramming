@@ -17,8 +17,9 @@
 #   Ayuda
 
 N = int(input())
-M = [list(map(int,input().split())) for _ in range(N)]
-Mu = [[0]*N for _ in range(N)]
+M = [list(map(int, input().split())) for _ in range(N)]
+Mu = [[0] * N for _ in range(N)]
+
 
 def obtener_vecinos_diagonales(i, j):
     vecinos = []
@@ -28,9 +29,10 @@ def obtener_vecinos_diagonales(i, j):
             vecinos.append(M[ni][nj])
     return vecinos
 
+
 for i in range(N):
     for j in range(N):
-        Mu[i][j]=max(obtener_vecinos_diagonales(i, j))
-        
+        Mu[i][j] = max(obtener_vecinos_diagonales(i, j))
+
 for i in range(N):
     print(*Mu[i])

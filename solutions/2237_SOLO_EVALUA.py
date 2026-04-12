@@ -19,7 +19,7 @@
 
 while True:
     try:
-        N, K = map(int,input().split())
-        print(int(sum((i+K)/(2+i+K) for i in range(N))+1))
+        N, K = map(int, input().split())
+        print(int(sum((i + K) / (2 + i + K) for i in range(N)) + 1))
     except EOFError:
         break

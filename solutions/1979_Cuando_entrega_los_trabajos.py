@@ -14,10 +14,11 @@
 #    Tiempo minimo para 8 trabajos es: 9Tiempo minimo para 6 trabajos es: 7Tiempo minimo para 7 trabajos es: 8Tiempo minimo para 9 trabajos es: 10
 #   Ayuda
 
+
 def min_time_to_complete_jobs(n, process_times, queries):
     def jobs_completed_in_time(t):
         return sum(t // p for p in process_times)
-    
+
     results = []
     for k in queries:
         low, high = 1, max(process_times) * k
@@ -29,6 +30,7 @@ def min_time_to_complete_jobs(n, process_times, queries):
                 low = mid + 1
         results.append(low)
     return results
+
 
 # Leer la entrada
 n = int(input())

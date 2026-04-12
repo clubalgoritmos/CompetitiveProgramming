@@ -21,4 +21,3 @@
 #    Juegos del segundo caso:
 #    Jugador con poder 3 jugó con jugador con poder 1. Jugador con poder 3 ganó. Entonces jugador con poder 1 se va al final de la línea.
 #    Jugador con poder 3 jugó con jugador con poder 2. Jugador con poder 3 ganó. Además ganó dos veces seguidas Entonces jugador con poder 3 se convierte en el ganador.
-

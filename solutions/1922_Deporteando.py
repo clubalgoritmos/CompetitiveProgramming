@@ -20,16 +20,16 @@
 
 N = int(input())
 balls = [tuple(input().split()) for _ in range(N)]
-dp = [1e9]*8
+dp = [1e9] * 8
 dp[0] = 0
 for c, s in balls:
     c = int(c)
     mask = 0
-    if 'B' in s:
+    if "B" in s:
         mask |= 1
-    if 'W' in s:
+    if "W" in s:
         mask |= 2
-    if 'F' in s:
+    if "F" in s:
         mask |= 4
     for i in range(8):
         dp[i | mask] = min(dp[i | mask], dp[i] + c)

@@ -34,7 +34,7 @@ if __name__ == "__main__":
         """Hemos leido los datos que que nos da, que sigue?
             Como cada museo es un punto del eje x
             entonces ordenamos los datos de menor a mayor
-            de esta forma al restar el ultimo con el 
+            de esta forma al restar el ultimo con el
             primero tendremos la respuestta correcta"""
         X.sort()
         print(X[-1] - X[0])

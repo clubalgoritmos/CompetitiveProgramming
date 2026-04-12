@@ -23,5 +23,5 @@
 #   Ayuda
 
 N = int(input())
-for i in range(1, N+1):
+for i in range(1, N + 1):
     print(f"{'-'*(N-i+1)}{str(i)*(2*i-1)}{'-'*(N-i+1)}")

@@ -41,6 +41,6 @@
 #    Cuando finalmente las tres casitas estuvieron terminadas, los tres cerditos celebraron satisfechos del trabajo realizado. Reían y cantaban sin preocupación -“¡No nos comerá el lobo!
 #    Continuara
 
-A,B,C,D = map(int,input().split())
-s = min(A,B,C,D)
-print(sum([abs(A-s),abs(B-s),abs(C-s),abs(D-s)]))
+A, B, C, D = map(int, input().split())
+s = min(A, B, C, D)
+print(sum([abs(A - s), abs(B - s), abs(C - s), abs(D - s)]))

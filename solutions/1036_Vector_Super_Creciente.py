@@ -23,6 +23,6 @@
 #   Ayuda
 t = int(input())
 for _ in range(t):
-    N,k,X = map(int,input().split())
-    W = (k*(k+1)/2)
-    print("SI" if W<=X else "NO")
+    N, k, X = map(int, input().split())
+    W = k * (k + 1) / 2
+    print("SI" if W <= X else "NO")

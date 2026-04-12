@@ -16,4 +16,4 @@
 #   Ayuda
 
 fun = lambda x: (x.upper() if x.islower() else x.lower())
-print(''.join(map(fun, input())))
+print("".join(map(fun, input())))

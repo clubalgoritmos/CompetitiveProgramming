@@ -25,17 +25,18 @@
 #    16868906586081664579
 #   Ayuda
 
+
 def criba_de_eratostenes(n):
     sieve = [True] * (n + 1)
     sieve[0] = sieve[1] = False
-    for i in range(2, int(n ** 0.5) + 1):
+    for i in range(2, int(n**0.5) + 1):
         if sieve[i]:
             for j in range(i * i, n + 1, i):
                 sieve[j] = False
     return sieve
+
+
 sieve = criba_de_eratostenes(10**7)
 for _ in range(int(input())):
-    a, b = map(int,input().split())
-    print(sum(sieve[a:b+1]))
-    
-    
+    a, b = map(int, input().split())
+    print(sum(sieve[a : b + 1]))

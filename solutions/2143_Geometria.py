@@ -19,8 +19,8 @@
 #   Ayuda
 import math
 
-a,b,c,d = map(int,input().split())
-#A^2 = B^2 + Z^2
-z = math.sqrt(abs(math.pow(a,2)-math.pow(b,2)))
-x = math.sqrt(math.pow(c+z,2)+math.pow(d,2))
+a, b, c, d = map(int, input().split())
+# A^2 = B^2 + Z^2
+z = math.sqrt(abs(math.pow(a, 2) - math.pow(b, 2)))
+x = math.sqrt(math.pow(c + z, 2) + math.pow(d, 2))
 print(x)

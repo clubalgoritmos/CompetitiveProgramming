@@ -20,9 +20,9 @@
 
 for _ in range(int(input())):
     N = int(input())
-    F = list(map(int,input().split()))
+    F = list(map(int, input().split()))
     for i in range(N):
-        if F[F[F[i]-1]-1]==i+1:
+        if F[F[F[i] - 1] - 1] == i + 1:
             print("YES")
             break
     else:

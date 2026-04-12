@@ -21,20 +21,20 @@
 #   Ayuda
 
 for _ in range(int(input())):
-    r,l = None,None
+    r, l = None, None
     for arr in input().split():
-        if arr=='S':
-            r+=l
-        elif arr=='M':
-            r*=l
-        elif arr=='D':
-            r=l//r
-        elif arr=='R':
-            r-=l
-        elif arr=='C':
-            r=r**2
-        elif r==None:
-            r=int(arr)
+        if arr == "S":
+            r += l
+        elif arr == "M":
+            r *= l
+        elif arr == "D":
+            r = l // r
+        elif arr == "R":
+            r -= l
+        elif arr == "C":
+            r = r**2
+        elif r == None:
+            r = int(arr)
         else:
-            l=int(arr)
+            l = int(arr)
     print(r)

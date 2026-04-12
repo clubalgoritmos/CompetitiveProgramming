@@ -21,4 +21,3 @@
 #    Del curso 1°'D' con sus 3 alumnosEl promedio del curso es 60/100La nota mas baja del curso es 40/100La nota mas alta del curso es 80/100
 #   Ayuda
 #    Todas las operaciones son con enteros
-

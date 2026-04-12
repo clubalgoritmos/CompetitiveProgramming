@@ -19,7 +19,7 @@
 #    3512911218
 #   Ayuda
 import math
- 
+
 for _ in range(int(input())):
-    a,b = map(int,input().split())
-    print((a*b)//math.gcd(a,b))
+    a, b = map(int, input().split())
+    print((a * b) // math.gcd(a, b))

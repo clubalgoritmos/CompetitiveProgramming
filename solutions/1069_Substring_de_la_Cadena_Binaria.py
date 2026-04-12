@@ -24,4 +24,3 @@
 #    637
 #   Ayuda
 #    Para el primer caso de prueba tenemos $S=110000$, entonces elegimos $i=1$ y $j=5$ entonces obtendremos la cadena siguiente $S=000011$ entonces la longitud maxima de la subcadena no decreciente es 6.
-

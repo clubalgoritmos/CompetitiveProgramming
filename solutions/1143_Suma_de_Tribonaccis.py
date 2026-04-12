@@ -21,11 +21,13 @@
 #    responder las querys.
 tribo = [0, 1, 1]
 
+
 def tribonacci(n):
     if n < len(tribo):
         return tribo[:n]
-    tribo.append(tribo[-1]+tribo[-2]+tribo[-3])
+    tribo.append(tribo[-1] + tribo[-2] + tribo[-3])
     return tribonacci(n)
+
 
 for _ in range(int(input())):
     n = int(input())

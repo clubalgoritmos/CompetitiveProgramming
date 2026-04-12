@@ -28,4 +28,3 @@
 #    Tienda $1$: compra $1$ dulce por $1$ Bs, entonces $K = 1$.
 #    Tienda $2$: no se puede comprar el dulce, ya que cuesta más del dinero que tiene.
 #    Tienda $3$: compra $1$ dulce por $1$ Bs, entonces $K = 0$.
-

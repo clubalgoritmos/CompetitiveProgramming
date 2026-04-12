@@ -28,5 +28,5 @@ while True:
     while len(arr) > 1:
         cost = heapq.heappop(arr) + heapq.heappop(arr)
         total_cost += cost
-        heapq.heappush(arr, cost) 
+        heapq.heappush(arr, cost)
     print(total_cost)

@@ -13,8 +13,10 @@
 #    PPPPPP  Y     Y  TTTTTT  H     H  OOOOOO  N   NP    P   Y   Y     T     H     H  O    O  NN  NPPPPPP    Y Y      T     HHHHHHH  O    O  N N NP          Y       T     H     H  O    O  N  NNP          Y       T     H     H  OOOOOO  N   N
 #   Ayuda
 
-print("""PPPPPP  Y     Y  TTTTTT  H     H  OOOOOO  N   N
+print(
+    """PPPPPP  Y     Y  TTTTTT  H     H  OOOOOO  N   N
 P    P   Y   Y     T     H     H  O    O  NN  N
 PPPPPP    Y Y      T     HHHHHHH  O    O  N N N
 P          Y       T     H     H  O    O  N  NN
-P          Y       T     H     H  OOOOOO  N   N""")
+P          Y       T     H     H  OOOOOO  N   N"""
+)

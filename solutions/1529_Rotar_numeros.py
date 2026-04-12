@@ -15,7 +15,7 @@
 #    93718345612
 #   Ayuda
 
-for _ in range(int(input())):asd
+for _ in range(int(input())):
     x, n = input().split()
     n = int(n) % (len(x))
-    print(x[n:]+x[:n],sep="")
+    print(x[n:] + x[:n], sep="")

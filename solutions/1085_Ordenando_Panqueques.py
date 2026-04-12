@@ -18,16 +18,16 @@
 
 while True:
     try:
-        A = list(map(int,input().split()))
+        A = list(map(int, input().split()))
         print(*A)
         flips = []
-        for j in range(len(A)-1, -1, -1):
-            max_index = A.index(max(A[:j+1]))
+        for j in range(len(A) - 1, -1, -1):
+            max_index = A.index(max(A[: j + 1]))
             if max_index != j:
                 if max_index != 0:
-                    A[:max_index+1] = reversed(A[:max_index+1])
+                    A[: max_index + 1] = reversed(A[: max_index + 1])
                     flips.append(len(A) - max_index)
-                A[:j+1] = reversed(A[:j+1])
+                A[: j + 1] = reversed(A[: j + 1])
                 flips.append(len(A) - j)
         flips.append(0)
         print(" ".join(map(str, flips)))

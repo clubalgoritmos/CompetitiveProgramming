@@ -17,7 +17,7 @@
 #   Ayuda
 
 n, m = map(int, input().split())
-A = [0]*m
+A = [0] * m
 for _ in range(n):
     row = list(map(int, input().split()))
     for i in range(m):

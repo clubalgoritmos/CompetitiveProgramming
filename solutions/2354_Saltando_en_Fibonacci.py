@@ -19,4 +19,3 @@
 #   Ayuda
 #    Se debe tener en cuenta que la sucesión crecerá respecto al número de caracteres distintos de espacio en la frase: usar longen caso java y c++
 #    Para Python: Use input().strip() para la lectura de las cadenas
-

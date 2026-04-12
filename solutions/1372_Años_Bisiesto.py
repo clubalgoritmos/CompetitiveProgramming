@@ -24,8 +24,8 @@
 #    Ejemplo de entrada 11800Ejemplo de salida 1noEjemplo de entrada 22000Ejemplo de salida 2si
 
 N = int(input())
-#ver si N es un año bisiesto
-if N%4==0 and (N%100!=0 or N%400==0):
+# ver si N es un año bisiesto
+if N % 4 == 0 and (N % 100 != 0 or N % 400 == 0):
     print("si")
 else:
     print("no")

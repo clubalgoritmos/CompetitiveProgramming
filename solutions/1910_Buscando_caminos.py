@@ -26,4 +26,3 @@
 #   Ayuda
 #    La siguiente imagen corresponde al ejemplo anterior.
 #    la primera consulta es $[4, 3, 8, 9, 10]$. La respuesta es "YES", porque tu puedes escoger el camino de la raiz $1$ al vértice $u = 10$, entonces los vértices $[3, 9, 10]$, pertenecen al camino de $1$ a $10$, y el vértice $8$ esta a distancia $1$ del vértice $7$ el cual pertenece a este camino, el vértice $4$ esta a distancia $1$ del vértice $1$ el cual pertenece a este camino.
-

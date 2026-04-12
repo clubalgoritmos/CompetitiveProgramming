@@ -17,7 +17,6 @@
 while True:
     try:
         n, b = map(int, input().split())
-        print(n | 1<<b, n ^ 1<<b)
+        print(n | 1 << b, n ^ 1 << b)
     except EOFError:
         break
-    

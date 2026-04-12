@@ -23,5 +23,5 @@ for _ in range(int(input())):
     for i in range(N):
         s = input()
         d1.append(int(s[i]))
-        d2.append(int(s[N-i-1]))
-    print(sum(d1)-sum(d2))
+        d2.append(int(s[N - i - 1]))
+    print(sum(d1) - sum(d2))

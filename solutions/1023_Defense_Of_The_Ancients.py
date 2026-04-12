@@ -14,6 +14,7 @@
 #   Ayuda
 #    Un heroe se puede enfrentar a otro si comparten al menos una habilidad
 
+
 def count_battles(N, A, B):
     adj_matrix = [[0] * N for _ in range(N)]
     for i in range(N):
@@ -39,6 +40,7 @@ def count_battles(N, A, B):
             result += 1
 
     return result
+
 
 for _ in range(int(input())):
     N = int(input())

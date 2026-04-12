@@ -21,4 +21,3 @@
 #   Ejemplo Salida
 #    Dr. Bum: me rindo, AUTODESTRUCCIONAdalid: meh, imposible
 #   Ayuda
-

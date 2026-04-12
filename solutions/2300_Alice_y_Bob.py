@@ -61,4 +61,4 @@
 
 intext = input()
 intable = intext.split(" ")
-print = (intable)
+print = intable

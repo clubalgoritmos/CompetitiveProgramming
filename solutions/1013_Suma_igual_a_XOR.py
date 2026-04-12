@@ -28,4 +28,3 @@
 #    Para $N = 5$ los $x$ que satisfacen ambas condiciones son:
 #    $5 + 0 = 5 \oplus 0 = 5$
 #    $5 + 2 = 5 \oplus 2 = 7$
-

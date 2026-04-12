@@ -21,7 +21,7 @@
 
 t = int(input())
 for _ in range(t):
-    X, Y = map(int,input().split())
+    X, Y = map(int, input().split())
     # A + B = X
     # A - B = Y
     # 2A = X + Y
@@ -30,4 +30,4 @@ for _ in range(t):
     # A + B = X
     # B = X - A
     B = X - A
-    print(A,B)
+    print(A, B)

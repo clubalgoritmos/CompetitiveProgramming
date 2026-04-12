@@ -40,10 +40,10 @@
 #    so de entrada, el Michi $1$ puede aprender el idioma $2$ y el Michi $8$ puede aprender el idioma $4$.
 #    En el tercer caso de entrada el Michi $2$ debe aprender el idioma $2$.
 
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 graph = dict()
 for ni in range(n):
-    arg = set(list(map(int,input().split()))[1:])
+    arg = set(list(map(int, input().split()))[1:])
     graph[ni] = arg
 
 print(graph)

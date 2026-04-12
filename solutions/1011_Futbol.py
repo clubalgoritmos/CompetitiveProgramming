@@ -21,9 +21,9 @@
 #   Ayuda
 #    2da div. 2012 UMSA
 
-graph = {i:tuple(map(int,input().split())) for i in range(int(input()))}
+graph = {i: tuple(map(int, input().split())) for i in range(int(input()))}
 for _ in range(int(input())):
     a, b = map(int, input().split())
-    xa, ya = graph[a-1]
-    xb, yb = graph[b-1]
+    xa, ya = graph[a - 1]
+    xb, yb = graph[b - 1]
     print(f"{((xa-xb)**2+(ya-yb)**2)**.5:.2f}")

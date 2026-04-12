@@ -25,6 +25,6 @@ if __name__ == "__main__":
         cont = 1
         while k != t:
             z *= 2
-            k += (z)
+            k += z
             cont += 1
         print(cont)

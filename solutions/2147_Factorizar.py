@@ -11,6 +11,7 @@
 #    2(3)*3(1)*5(1)2(4)*3(2)*5(1)
 #   Ayuda
 
+
 def prime_factors(n):
     i = 2
     factors = {}
@@ -24,10 +25,11 @@ def prime_factors(n):
         factors[n] = factors.get(n, 0) + 1
     return factors
 
+
 for _ in range(int(input())):
     n = int(input())
     factors = {}
-    for i in range(2, n+1):
+    for i in range(2, n + 1):
         for p, count in prime_factors(i).items():
             factors[p] = factors.get(p, 0) + count
     print("".join([f"{k}({v})*" for k, v in sorted(factors.items())])[:-1])

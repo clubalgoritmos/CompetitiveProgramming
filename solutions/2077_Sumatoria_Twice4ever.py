@@ -21,4 +21,3 @@
 #    En Python para imprimir con 2 decimales de precisión se debe usarprint("{:.2f}".format(variableSuma))
 #    En Python para imprimir con 2 decimales de precisión se debe usar
 #    print("{:.2f}".format(variableSuma))
-

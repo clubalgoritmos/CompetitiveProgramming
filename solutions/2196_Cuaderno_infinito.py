@@ -22,4 +22,3 @@
 #    10 9 19 2
 #    Nota:
 #    La salida debe tener un espacio al final, vease los ejemplos.
-

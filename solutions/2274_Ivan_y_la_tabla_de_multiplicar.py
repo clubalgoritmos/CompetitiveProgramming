@@ -18,4 +18,3 @@
 #    2
 #   Ayuda
 #    Una tabla de multiplicar de $2 \ast 3$ se ve así:$1$ $2$ $3$$2$ $4$ $6$
-

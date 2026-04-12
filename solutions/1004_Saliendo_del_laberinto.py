@@ -23,8 +23,9 @@
 
 from collections import deque
 
+
 def funcion(n, m, laberinto, x1, y1, x2, y2):
-    dist = [[float('inf')]*m for _ in range(n)]
+    dist = [[float("inf")] * m for _ in range(n)]
     dist[x1][y1] = 0
     queue = deque([(x1, y1)])
 
@@ -41,7 +42,8 @@ def funcion(n, m, laberinto, x1, y1, x2, y2):
                     else:
                         queue.appendleft((nx, ny))
 
-    return dist[x2][y2] if dist[x2][y2] != float('inf') else -1
+    return dist[x2][y2] if dist[x2][y2] != float("inf") else -1
+
 
 for _ in range(int(input())):
     n, m = map(int, input().split())

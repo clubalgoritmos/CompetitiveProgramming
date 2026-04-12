@@ -16,14 +16,16 @@
 #    Considere que el signo cambia y que la serie crece rapidamente para esto almacenar los números en un int podría no ser suficiente
 
 n = int(input())
-serie = [1,2,6,24,120]
+serie = [1, 2, 6, 24, 120]
+
 
 def generate_serie(n):
-    if n<len(serie):
+    if n < len(serie):
         return serie[n]
     else:
-        serie.append(serie[n-1]*(n-1))
+        serie.append(serie[n - 1] * (n - 1))
         return serie[n]
 
+
 for i in range(n):
-    print(int(generate_serie(i)*(-1)**(i-1)))
+    print(int(generate_serie(i) * (-1) ** (i - 1)))

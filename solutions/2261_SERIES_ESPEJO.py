@@ -14,7 +14,7 @@
 #    1 -1 2
 #   Ayuda
 for i in range(int(input())):
-    if i%2==0:
-        print(int((i+2)/2),end=" ")
+    if i % 2 == 0:
+        print(int((i + 2) / 2), end=" ")
         continue
-    print(-int((i+2)/2),end=" ")
+    print(-int((i + 2) / 2), end=" ")

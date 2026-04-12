@@ -17,11 +17,13 @@
 #   Ayuda
 #    4 / 2 = 2.07 / 4 = 1.7511 / 6 = 1.833333333333333316 / 8 = 2.023 / 10 = 2.3
 
+
 def calcular_diferencia(n):
     if n == 1:
         return 3
     else:
         return calcular_diferencia(n - 1) + n
+
 
 def calcular_iesimo_numero(i):
     if i == 1:
@@ -34,8 +36,8 @@ while True:
     try:
         N = int(input())
         S = 0
-        for i in range(1,N+1):
-            S+=calcular_iesimo_numero(i)/(2*i)
+        for i in range(1, N + 1):
+            S += calcular_iesimo_numero(i) / (2 * i)
         print("{:.4f}".format(S))
     except EOFError:
         break

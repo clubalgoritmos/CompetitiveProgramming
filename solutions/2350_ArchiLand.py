@@ -21,4 +21,3 @@
 #   Ejemplo Salida
 #    . # # # . # o o o # # o # o # . # # o # . . . # . # o # . . o o o # . # # o # . . # o # # . . # # o
 #   Ayuda
-

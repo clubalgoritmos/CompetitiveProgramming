@@ -20,4 +20,3 @@
 #   Ejemplo Salida
 #    Existen 15 subsecuencias11,21,2,31,2,3,41,2,41,31,3,41,422,32,3,42,433,44Existen 12 subsecuencias11,11,1,11,1,1,11,21,2,11,2,1,11,2,1,1,122,12,1,12,1,1,1
 #   Ayuda
-

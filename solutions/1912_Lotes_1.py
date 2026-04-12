@@ -17,10 +17,10 @@
 #   Ayuda
 
 N = int(input())
-pares, impares = 0,0
+pares, impares = 0, 0
 for _ in range(N):
     n = int(input())
-    if n%2==0:
+    if n % 2 == 0:
         pares += 1
         continue
     impares += 1

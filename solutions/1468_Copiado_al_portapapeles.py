@@ -15,4 +15,3 @@
 #   Ejemplo Salida
 #    42 tiene 3 divisores990 tiene 4 divisores198 tiene 3 divisores
 #   Ayuda
-

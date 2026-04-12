@@ -19,4 +19,4 @@
 #   Ayuda
 #    analize caracter por caracter realizando los pasos a travez de funciones
 
-print("".join(["."+Si for Si in input().lower() if not Si in {"a", "e", "i", "o", "u", "y"}]))
+print("".join(["." + Si for Si in input().lower() if not Si in {"a", "e", "i", "o", "u", "y"}]))

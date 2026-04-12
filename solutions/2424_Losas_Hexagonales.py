@@ -29,4 +29,4 @@
 
 for _ in range(int(input())):
     N = int(input())
-    print((2**N)//6 % 1000000007)
+    print((2**N) // 6 % 1000000007)

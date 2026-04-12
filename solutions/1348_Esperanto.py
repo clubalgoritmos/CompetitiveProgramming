@@ -14,12 +14,16 @@
 #    unuNaudekdek unuSepdek Sep
 #   Ayuda
 
-NUM = ["","unu", "du", "tri", "kvar", "Kvin", "ses", "Sep", "OK", "Nau", "dek"]
+NUM = ["", "unu", "du", "tri", "kvar", "Kvin", "ses", "Sep", "OK", "Nau", "dek"]
 
 while True:
     try:
         S = input().strip()
-        esperanto_nums = [(NUM[int(si)] if not (len(S)-1-i==1 and si=="1") else "") + ("dek" if len(S)-1-i>=1 else "") for i, si in enumerate(S)]
+        esperanto_nums = [
+            (NUM[int(si)] if not (len(S) - 1 - i == 1 and si == "1") else "")
+            + ("dek" if len(S) - 1 - i >= 1 else "")
+            for i, si in enumerate(S)
+        ]
         print(" ".join(num for num in esperanto_nums if num))
     except EOFError:
         break

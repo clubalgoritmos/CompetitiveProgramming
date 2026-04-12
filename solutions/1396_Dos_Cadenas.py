@@ -16,7 +16,7 @@
 #   Ayuda
 while True:
     try:
-        S = input()+input()
+        S = input() + input()
         if all(si in S for si in "abcdefghijklmnopqrstuvwxyz"):
             print("Correcto")
         else:

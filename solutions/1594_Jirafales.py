@@ -21,4 +21,3 @@
 #    (3 + 2 + 2 ) / 3 = 2.333
 #    agregando la nota 5 se tiene:
 #    ( 3 + 2 + 2 + 5 ) / 4 = 3
-

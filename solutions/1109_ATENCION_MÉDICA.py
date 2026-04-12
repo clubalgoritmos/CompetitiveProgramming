@@ -22,4 +22,3 @@
 #    Case 1:12132Case 2:12
 #   Ayuda
 #    Dado un vector en la posicion "i" actualizas la posicion en la cola de la persona "i".
-

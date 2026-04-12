@@ -31,9 +31,9 @@
 #   Ayuda
 
 for _ in range(int(input())):
-    AA,BB = map(int,input().split(":"))
-    SS = AA*60*60+BB*60
-    SS -= AA*60+BB
+    AA, BB = map(int, input().split(":"))
+    SS = AA * 60 * 60 + BB * 60
+    SS -= AA * 60 + BB
     HH = SS // 3600
     MM = (SS % 3600) // 60
     SS = SS % 60

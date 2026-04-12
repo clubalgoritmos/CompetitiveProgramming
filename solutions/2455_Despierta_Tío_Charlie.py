@@ -21,4 +21,3 @@
 #    27279-116471793358578060125049
 #   Ayuda
 #    El segundo ejemplo es casi como el primero, pero necesita 11 minutos de sueño en lugar de 10. Sin embargo, eso no cambia nada porque de todos modos obtiene 11 minutos con estos parámetros de alarma.En la tercera prueba, se despierta lo suficientemente descansado después de la primera alarma. Por lo tanto, la respuesta es b=9En el cuarto caso de prueba se despierta después de 5minutos. Desafortunadamente, sigue reiniciando su alarma infinitamente y no puede descansar ni un solo minuto :v
-

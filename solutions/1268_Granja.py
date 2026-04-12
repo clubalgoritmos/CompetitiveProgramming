@@ -16,10 +16,10 @@
 #   Ayuda
 
 while True:
-    X,Y = map(int,input().split())
-    if X==0 and Y==0:
+    X, Y = map(int, input().split())
+    if X == 0 and Y == 0:
         break
-    if (Y-2*X)%2==0 and (4*X-Y)%2==0 and (Y-2*X)>=0 and (4*X-Y)>=0:
-        print((4*X-Y)//2,(Y-2*X)//2)
+    if (Y - 2 * X) % 2 == 0 and (4 * X - Y) % 2 == 0 and (Y - 2 * X) >= 0 and (4 * X - Y) >= 0:
+        print((4 * X - Y) // 2, (Y - 2 * X) // 2)
     else:
         print(-1)

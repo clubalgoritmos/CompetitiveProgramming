@@ -17,8 +17,8 @@
 #   Ayuda
 
 for _ in range(int(input())):
-    a,b = map(int,input().split())
-    if a%b:
-        print("La división no es exacta. Cociente:",a//b,"Resto:",a%b)
+    a, b = map(int, input().split())
+    if a % b:
+        print("La división no es exacta. Cociente:", a // b, "Resto:", a % b)
     else:
-        print("La división es exacta. Cociente:",a//b)
+        print("La división es exacta. Cociente:", a // b)

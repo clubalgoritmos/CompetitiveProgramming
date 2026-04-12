@@ -26,6 +26,6 @@
 #    40
 #   Ayuda
 
-a,b = (int(x) for x in input().split(" "))
+a, b = (int(x) for x in input().split(" "))
 n = int(input())
-print(sum([int(x) for x in input().split() if (int(x)<=b and int(x)>=a)]))
+print(sum([int(x) for x in input().split() if (int(x) <= b and int(x) >= a)]))

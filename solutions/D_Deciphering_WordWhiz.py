@@ -1,17 +1,21 @@
-#Solucion
+# Solucion
 n = int(input())
 ex = input()
+
+
 def convertir(s):
-    r=str()
+    r = str()
     for i in range(len(s)):
         if s[i] in ex:
             if i == list(ex).index(s[i]):
-                r+="*"
+                r += "*"
             else:
-                r+="!"
+                r += "!"
         else:
-            r+="X"
+            r += "X"
     return r
-arr = [convertir(ex)]+[convertir(input()) for _ in range(n-1)]
+
+
+arr = [convertir(ex)] + [convertir(input()) for _ in range(n - 1)]
 for _ in range(int(input())):
     print(arr.count(input()))

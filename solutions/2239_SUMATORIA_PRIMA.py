@@ -15,6 +15,7 @@
 #    4
 #   Ayuda
 
+
 def next_prime(n):
     while True:
         n += 1
@@ -24,10 +25,11 @@ def next_prime(n):
         else:
             return n
 
+
 N = int(input())
 last = 2
 S = last
 for _ in range(1, N):
     last = next_prime(last)
-    S += last * (-1)**_
+    S += last * (-1) ** _
 print(S)

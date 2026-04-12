@@ -19,8 +19,8 @@
 #   Ayuda
 
 for _ in range(int(input())):
-    n, m = map(int,input().split())
-    q = list(map(int,input().split()))
+    n, m = map(int, input().split())
+    q = list(map(int, input().split()))
     for q_i in range(n):
         q[q_i] = (q[q_i], q_i)
     time = 0

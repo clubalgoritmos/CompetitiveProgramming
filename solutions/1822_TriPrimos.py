@@ -29,7 +29,7 @@ for p in range(int(input())):
     num = int(input())
     div = list()
     for n in range(2, num):
-        if num%n == 0:
+        if num % n == 0:
             div.append(n)
     if len(div) == 1:
         print("YES")

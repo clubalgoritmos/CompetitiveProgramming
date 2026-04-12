@@ -22,4 +22,3 @@
 #    Como dato curioso, cuando pikachu lucha bajo una tormenta electrica y realiza un impactrueno, el trueno no sale de el, sino del cielo, ya que las cargas electricas se equilibran con las cargas de las nubes, es como si pikachu controlara los cielos.
 #    Entrada x y Salida x Ignorar esas lineas solo es para un mejor entendimiento del problema
 #    Hallar a cuantos mata de un ipactrueno. seguir usando ipactrueno hasta que no quede ni un enemigo
-

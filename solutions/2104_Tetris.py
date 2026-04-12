@@ -30,4 +30,3 @@
 #    Se puede demostrar que no puede hacer nada para finalizar el proceso.
 #    En el tercer caso de prueba del ejemplo, primero coloca la figura en la segunda columna después del segundo paso del proceso, el campo se convierte en [0,2]. Luego coloque la figura en la primera columna y después del segundo paso del proceso, el campo se convierte en [0,0].
 #    En el cuarto caso de prueba del ejemplo, coloque la figura en la primera columna, luego el campo se convierte en [102] después del primer paso del proceso, y luego el campo se convierte en [0] después del segundo paso del proceso.
-

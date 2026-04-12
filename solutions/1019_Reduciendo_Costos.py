@@ -16,6 +16,6 @@
 #   Ayuda
 
 t = int(input())
-for i in range(1,t+1):
-    a,b,c = sorted(map(int, input().split()))
+for i in range(1, t + 1):
+    a, b, c = sorted(map(int, input().split()))
     print(f"Case {i}: {b}")

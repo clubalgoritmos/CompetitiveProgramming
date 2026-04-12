@@ -22,10 +22,10 @@
 
 for _ in range(int(input())):
     N = int(input())
-    A = list(map(int,input().split()))
+    A = list(map(int, input().split()))
     c = 0
     max_from_right = A[-1]
-    for i in range(N-2, -1, -1):
+    for i in range(N - 2, -1, -1):
         if A[i] < max_from_right:
             c += 1
         else:

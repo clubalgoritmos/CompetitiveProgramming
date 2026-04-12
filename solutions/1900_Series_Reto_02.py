@@ -23,11 +23,14 @@
 #    0 0 1 1 1 1 2 2 3 3 0 0 1 1 1 1 0 0 1 1 1 1 20
 #   Ayuda
 fibo = [0, 0, 1, 1, 1, 1]
+
+
 def fibonacci(n):
     if n < len(fibo):
         return fibo[:n]
-    fibo.append(fibo[-2]+fibo[-4])
+    fibo.append(fibo[-2] + fibo[-4])
     return fibonacci(n)
+
 
 for _ in range(int(input())):
     print(*fibonacci(int(input())), end=" ")

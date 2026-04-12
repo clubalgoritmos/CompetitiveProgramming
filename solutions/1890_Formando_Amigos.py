@@ -34,5 +34,5 @@ import math
 
 t = int(input())
 for _ in range(t):
-    m,n = map(int,input().split())
-    print(math.comb(m%n,2))
+    m, n = map(int, input().split())
+    print(math.comb(m % n, 2))

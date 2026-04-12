@@ -26,10 +26,10 @@
 for _ in range(int(input())):
     N = int(input())
     arr = [tuple(map(int, input().split())) for _ in range(N)]
-    x0,y0,r = tuple(map(int, input().split()))
-    c=0
+    x0, y0, r = tuple(map(int, input().split()))
+    c = 0
     for i in range(N):
-        x,y = arr[i]
-        if (x-x0)**2 + (y-y0)**2 <= r**2:
-            c+=1
+        x, y = arr[i]
+        if (x - x0) ** 2 + (y - y0) ** 2 <= r**2:
+            c += 1
     print(c)

@@ -15,6 +15,6 @@
 #    5 10 15 20 25 30
 #   Ayuda
 
-x, n = map(int,input().split())
-for i in range(1,n+1):
-    print(x*i,end=" ")
+x, n = map(int, input().split())
+for i in range(1, n + 1):
+    print(x * i, end=" ")

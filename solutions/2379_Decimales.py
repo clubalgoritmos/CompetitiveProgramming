@@ -20,16 +20,17 @@
 #   Ayuda
 
 from decimal import Decimal, getcontext
+
 for i in range(int(input())):
     num = int(input())
     for n in range(2, num):
-        if num % n == 0 and n!=-1:
+        if num % n == 0 and n != -1:
             print(f"{num}: -1")
             break
-        elif n == num-1:
+        elif n == num - 1:
             getcontext().prec = 45
             var = list(str(f"{Decimal(1)/Decimal(num):.41f}"))
             var.pop(41)
             var.pop(0)
             var.pop(0)
-            print(f'{num}:', ' '.join(var), '')
+            print(f"{num}:", " ".join(var), "")

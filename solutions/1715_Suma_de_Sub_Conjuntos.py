@@ -20,23 +20,23 @@
 while True:
     try:
         # Lee el número objetivo 's' y el número de elementos 'n'
-        s, n = map(int,input().split())
+        s, n = map(int, input().split())
         # Lee los 'n' elementos
-        A = list(map(int,input().split()))
+        A = list(map(int, input().split()))
         # Inicializa el contador de subconjuntos que suman 's'
-        c=0
+        c = 0
         # Genera todos los posibles subconjuntos de 'A'
-        for i in range(1,1<<n):
+        for i in range(1, 1 << n):
             # Inicializa la suma del subconjunto actual
-            suma=0
+            suma = 0
             # Verifica cada bit de 'i'
             for j in range(n):
                 # Si el bit 'j' de 'i' está encendido, añade 'A[j]' a 'suma'
-                if i&(1<<j):
-                    suma+=A[j]
+                if i & (1 << j):
+                    suma += A[j]
             # Si la suma del subconjunto actual es igual a 's', incrementa el contador
-            if suma==s:
-                c+=1
+            if suma == s:
+                c += 1
         # Imprime el número de subconjuntos que suman 's'
         print(c)
     # Si se encuentra un error de fin de archivo (EOFError), termina el programa

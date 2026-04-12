@@ -8,7 +8,8 @@
 #   Ejemplo Salida
 #   Ayuda
 
-#NO FUNCIONA
+
+# NO FUNCIONA
 def sieve_of_eratosthenes(n):
     primes = [True] * (n + 1)
     primes[0] = primes[1] = False
@@ -22,18 +23,21 @@ def sieve_of_eratosthenes(n):
 
     return {i for i in range(n + 1) if primes[i]}
 
+
 def sieve_of_fibonacci(n):
     fib = [0, 1]
     while len(fib) < n:
         fib.append(fib[-1] + fib[-2])
     return fib
 
+
 primes = sieve_of_eratosthenes(10000)
 fibo = sieve_of_fibonacci(1000)
 import sys
+
 for i in sys.stdin:
     N = int(i)
     if fibo[N] in primes:
-        print('Es primo')
+        print("Es primo")
         continue
-    print('No es primo')
+    print("No es primo")

@@ -36,11 +36,13 @@
 #    No es primoEs primoEs primoNo es primoEs primoNo es primo
 #   Ayuda
 
+
 def sieve_of_fibo(n):
     fibo = [0, 1]
     for i in range(2, n):
-        fibo.append(fibo[i-1] + fibo[i-2])
+        fibo.append(fibo[i - 1] + fibo[i - 2])
     return fibo
+
 
 def is_prime(num):
     if num < 2:
@@ -49,6 +51,7 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
+
 
 # Precompute Fibonacci sequence up to the 1000th term
 fibo = sieve_of_fibo(52)

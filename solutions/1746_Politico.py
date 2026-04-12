@@ -14,17 +14,20 @@
 #    {Smith=1000, Taylor=-20000}{Smith=20000, Taylor=-20000}{Blonde=1, Blue=0, Brown=-100000, Orange=5000, Pink=12345, Red=3, White=-1}
 #   Ayuda
 
+
 def añadir(nombre, numero):
     if nombre in politicos:
         politicos[nombre] += numero
     else:
         politicos[nombre] = numero
 
+
 def regalar(nombre, numero):
     if nombre in politicos:
         politicos[nombre] -= numero
     else:
         politicos[nombre] = -numero
+
 
 def transfiere(nombre, numero, nombre2):
     if nombre in politicos:
@@ -36,15 +39,16 @@ def transfiere(nombre, numero, nombre2):
     else:
         politicos[nombre2] = numero
 
+
 funcs = {
-    "R": lambda nombre, numero: añadir(nombre,int(numero)), #Obtiene
-    "G": lambda nombre, numero: regalar(nombre, int(numero)), #Regala
-    "P": lambda nombre, numero, nombre2: transfiere(nombre, int(numero), nombre2) #Transfiere
+    "R": lambda nombre, numero: añadir(nombre, int(numero)),  # Obtiene
+    "G": lambda nombre, numero: regalar(nombre, int(numero)),  # Regala
+    "P": lambda nombre, numero, nombre2: transfiere(nombre, int(numero), nombre2),  # Transfiere
 }
 
 while True:
     try:
-        politicos=dict()
+        politicos = dict()
         while True:
             entry = tuple(input().split())
             if entry[0] == "END":

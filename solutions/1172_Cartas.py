@@ -18,4 +18,4 @@
 #   Ayuda
 
 N = int(input())
-print("Completa" if N==54 else "Incompleta")
+print("Completa" if N == 54 else "Incompleta")

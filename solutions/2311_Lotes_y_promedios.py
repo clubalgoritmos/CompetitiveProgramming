@@ -39,14 +39,14 @@
 lotes = []
 resultados = []
 inline = int(input())
-for k in range(inline+1):
+for k in range(inline + 1):
     if k < 1:
         lotes.append(int(input()))
     elif k >= inline:
-        #lotes.append(int(input()))
-        resultados.append((lotes[k-1] + lotes[0])/2)
+        # lotes.append(int(input()))
+        resultados.append((lotes[k - 1] + lotes[0]) / 2)
     else:
         lotes.append(int(input()))
-        resultados.append((lotes[k-1] + lotes[k])/2)
-        
-print(' '.join(map(str, resultados)))
+        resultados.append((lotes[k - 1] + lotes[k]) / 2)
+
+print(" ".join(map(str, resultados)))

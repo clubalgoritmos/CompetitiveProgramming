@@ -22,7 +22,7 @@
 while True:
     try:
         n = input()
-        A = sorted(set(map(int,input().split())))
-        print(A[2] if len(A)>2 else -1)
+        A = sorted(set(map(int, input().split())))
+        print(A[2] if len(A) > 2 else -1)
     except EOFError:
         break

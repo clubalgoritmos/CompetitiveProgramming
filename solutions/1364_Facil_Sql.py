@@ -15,4 +15,3 @@
 #   Ejemplo Salida
 #    SELECT field1, field2 FROM table1SELECT field3, field4, field5, field6 FROM table2
 #   Ayuda
-

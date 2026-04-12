@@ -16,4 +16,3 @@
 #   Ejemplo Salida
 #    o o o o o o o o o o x o x o x o x oo o o o o o o o o o x o x x x o x oo o o x x x o o oo x o x x x o x oo o o o o o o o oo x o x o x o x oo o o o o o o o o
 #   Ayuda
-
