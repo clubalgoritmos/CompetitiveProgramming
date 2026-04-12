@@ -1,0 +1,13 @@
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  \.git
+ |\.quarto
+ |_site
+ |docs/problems
+ |docs/competitions
+)/
+'''

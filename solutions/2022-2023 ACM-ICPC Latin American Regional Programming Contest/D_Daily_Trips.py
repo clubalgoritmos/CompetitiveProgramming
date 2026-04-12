@@ -1,4 +1,4 @@
-# | competition: "ICPC Bolivia Latin American Regional Programming Contest"
+# | competition: "ICPC Latin American Regional – 2022"
 # | problem_id: "D"
 # | title: "Daily Trips"
 # | tags: [Matemáticas, Lógica]

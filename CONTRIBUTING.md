@@ -77,3 +77,33 @@ quarto preview
 ```
 
 Si todo luce bien, ¡haz un *commit* con tus cambios y abre un *Pull Request*!
+
+## 4. Formato de Código (Obligatorio)
+
+Para mantener todos los scripts con el mismo estilo, usamos **pre-commit** con formateadores automáticos:
+
+* **Python:** Black (configurado en `pyproject.toml`)
+* **C/C++:** clang-format (configurado en `.clang-format`)
+
+### Instalación inicial
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+Desde ese momento, cada `git commit` ejecutará los hooks automáticamente.
+
+### Formatear todo localmente
+
+```bash
+pre-commit run --all-files
+```
+
+### Verificar formato sin modificar archivos
+
+```bash
+pre-commit run --all-files --show-diff-on-failure
+```
+
+Además, GitHub Actions ejecuta estas verificaciones automáticamente en cada PR y push a `main`.
