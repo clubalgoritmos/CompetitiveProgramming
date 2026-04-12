@@ -1,5 +1,5 @@
 ---
-title: "Competitive Programming Knowledge Hub"
+title: "Bienvenido"
 ---
 
 {{< include README.md >>}}
