@@ -1,50 +1,63 @@
-R, C = map(int,input().split(" "))
-M = [[int(x) for x in input().split(" ")]for _ in range(R)]
+# | competition: "ICPC Latin American Regional – 2022"
+# | problem_id: "I"
+# | title: "Italian Calzone & Pasta Corner"
+# | tags: ["Graph Traversal", "Dynamic Programming", "Greedy"]
+# | language: "Python"
+# | approach: "Brute Force Simulation"
+# | description: "Find the longest subsequence of dishes (1 to R×C) that can be visited in order on a 2D grid, where movement is allowed only to adjacent cells (up, down, left, right). Revisiting cells is allowed but dishes are only counted once."
+
+
+R, C = map(int, input().split(" "))
+M = [[int(x) for x in input().split(" ")] for _ in range(R)]
+
 
 def buscarM(x):
-  for i in range(R):
-    try:
-      if (j:= M[i].index(x))!=None:
-        return i, j
-    except:
-      pass
-  return 0,0
+    for i in range(R):
+        try:
+            if (j := M[i].index(x)) != None:
+                return i, j
+        except:
+            pass
+    return 0, 0
 
-def obtvecinos(i,j):
-  if (0<=i-1 and i-1<R):
-    vecinos.add(M[i-1][j])
-  if (0<=i+1 and i+1<R):
-    vecinos.add(M[i+1][j])
-  if (0<=j-1 and j-1<C):
-    vecinos.add(M[i][j-1])
-  if (0<=j+1 and j+1<C):
-    vecinos.add(M[i][j+1])
+
+def obtvecinos(i, j):
+    if 0 <= i - 1 and i - 1 < R:
+        vecinos.add(M[i - 1][j])
+    if 0 <= i + 1 and i + 1 < R:
+        vecinos.add(M[i + 1][j])
+    if 0 <= j - 1 and j - 1 < C:
+        vecinos.add(M[i][j - 1])
+    if 0 <= j + 1 and j + 1 < C:
+        vecinos.add(M[i][j + 1])
+
 
 def buscarmenorvecino(x):
-  try:
-    while True:
-      p = min(vecinos)
-      if p>x:
-        return p
-      else:
-        vecinos.remove(p)
-  except:
-    return False
+    try:
+        while True:
+            p = min(vecinos)
+            if p > x:
+                return p
+            else:
+                vecinos.remove(p)
+    except:
+        return False
 
-maxc=0
-for q in range(1, R*C+1):
-  vecinos=set()
-  o=q
-  c=0
-  p=None
-  while True:
-    c+=1
-    i,j = buscarM(o)
-    obtvecinos(i,j)
-    p = buscarmenorvecino(o)
-    if not p:
-      break
-    o=p
-  if c>maxc:
-    maxc=c
+
+maxc = 0
+for q in range(1, R * C + 1):
+    vecinos = set()
+    o = q
+    c = 0
+    p = None
+    while True:
+        c += 1
+        i, j = buscarM(o)
+        obtvecinos(i, j)
+        p = buscarmenorvecino(o)
+        if not p:
+            break
+        o = p
+    if c > maxc:
+        maxc = c
 print(maxc)

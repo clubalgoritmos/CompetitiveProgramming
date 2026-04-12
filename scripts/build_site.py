@@ -29,7 +29,35 @@ def slugify(value):
     slug = slug.strip("_")
     return slug or "item"
 
+
+def yaml_quote(value):
+    text = str(value)
+    text = text.replace('\\', '\\\\').replace('"', '\\"')
+    return f'"{text}"'
+
+
+def rewrite_markdown_links(content, readme_path, repo_blob_base):
+    readme_parent = readme_path.parent
+
+    def replace(match):
+        label = match.group(1)
+        target = match.group(2).strip()
+        if target.startswith(('http://', 'https://', 'mailto:', '#')):
+            return match.group(0)
+
+        absolute_target = (readme_parent / target).resolve()
+        project_root = Path.cwd().resolve()
+        try:
+            rel_target = absolute_target.relative_to(project_root)
+            github_url = f"{repo_blob_base}/{rel_target.as_posix()}"
+            return f"[{label}]({github_url})"
+        except ValueError:
+            return match.group(0)
+
+    return re.sub(r'\[([^\]]+)\]\(([^)]+)\)', replace, content)
+
 def main():
+    repo_blob_base = 'https://github.com/clubalgoritmos/CompetitiveProgramming/blob/main'
     solutions_dir = Path('solutions')
     docs_dir = Path('docs')
     output_dir = docs_dir / 'problems'
@@ -68,12 +96,14 @@ def main():
         comp_dir = output_dir / comp_slug
         comp_dir.mkdir(parents=True, exist_ok=True)
         competition_tags = []
+        competition_readme = None
         
         for problem_id, files in probs.items():
             files = sorted(files, key=lambda item: (item.get('language', ''), item.get('file_path', '')))
             first_meta = files[0]
             title = first_meta.get('title', f"Problem {problem_id}")
             desc = first_meta.get('description', '')
+            official_link = first_meta.get('link', '')
             problem_slug = slugify(problem_id)
             tag_set = []
             for meta in files:
@@ -82,6 +112,10 @@ def main():
                         tag_set.append(tag)
                     if tag and tag not in competition_tags:
                         competition_tags.append(tag)
+                path_obj = Path(meta['file_path'])
+                readme_candidate = path_obj.parent / 'README.md'
+                if readme_candidate.exists() and competition_readme is None:
+                    competition_readme = readme_candidate
             languages = []
             for meta in files:
                 lang = meta.get('language', 'Code')
@@ -92,11 +126,20 @@ def main():
             qmd_path = comp_dir / f"{problem_slug}.qmd"
             with open(qmd_path, 'w', encoding='utf-8') as f:
                 f.write("---\n")
-                f.write(f"title: \"Problema {problem_id}: {title}\"\n")
+                f.write(f"title: {yaml_quote(f'Problema {problem_id}: {title}')}\n")
+                f.write(f"problem_id: {yaml_quote(problem_id)}\n")
+                f.write(f"competition: {yaml_quote(competition)}\n")
+                f.write(f"languages: {yaml_quote(', '.join(languages))}\n")
+                f.write(f"solutions_count: {len(files)}\n")
+                if desc:
+                    f.write(f"description: {yaml_quote(desc)}\n")
+                if official_link:
+                    f.write(f"official_link: {yaml_quote(official_link)}\n")
+                f.write(f"featured: {str(featured).lower()}\n")
                 if tag_set:
                     f.write("categories:\n")
                     for tag in tag_set:
-                        f.write(f"  - \"{tag}\"\n")
+                        f.write(f"  - {yaml_quote(tag)}\n")
                 f.write("---\n\n")
                 
                 if desc:
@@ -130,25 +173,33 @@ def main():
                 "languages": languages,
                 "featured": featured,
                 "solutions_count": len(files),
+                "official_link": official_link,
                 "url": f"problems/{comp_slug}/{problem_slug}.html",
             })
 
         competition_page = competitions_dir / f"{comp_slug}.qmd"
         with open(competition_page, 'w', encoding='utf-8') as f:
             f.write("---\n")
-            f.write(f"title: \"{competition}\"\n")
+            f.write(f"title: {yaml_quote(competition)}\n")
             if competition_tags:
                 f.write("categories:\n")
                 for tag in competition_tags:
-                    f.write(f"  - \"{tag}\"\n")
+                    f.write(f"  - {yaml_quote(tag)}\n")
             f.write("listing:\n")
             f.write(f"  contents: ../problems/{comp_slug}/*.qmd\n")
             f.write("  type: table\n")
-            f.write("  fields: [title, categories]\n")
+            f.write("  fields: [problem_id, title, categories, languages, solutions_count]\n")
             f.write("  filter-ui: true\n")
             f.write("  sort: \"title\"\n")
             f.write("  page-size: 20\n")
             f.write("---\n\n")
+            if competition_readme is not None:
+                readme_text = competition_readme.read_text(encoding='utf-8')
+                readme_text = rewrite_markdown_links(readme_text, competition_readme, repo_blob_base)
+                f.write("## Contexto de la competencia\n\n")
+                f.write(readme_text)
+                f.write("\n\n")
+            f.write("## Problemas\n\n")
             f.write("Problemas de esta competencia.\n")
 
     catalog = sorted(catalog, key=lambda item: (item["competition"].lower(), str(item["problem_id"]).lower()))

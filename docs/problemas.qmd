@@ -3,10 +3,15 @@ title: "Indice de Problemas"
 listing:
   contents: problems/*/*.qmd
   type: table
-  fields: [title, categories]
+  fields: [problem_id, title, competition, categories, languages, solutions_count, official_link]
   field-display-names:
+    problem_id: ID
     title: Problema
+    competition: Competencia
     categories: Tags
+    languages: Lenguajes
+    solutions_count: Soluciones
+    official_link: Enlace
   filter-ui: true
   sort-ui: true
   sort: "title"
