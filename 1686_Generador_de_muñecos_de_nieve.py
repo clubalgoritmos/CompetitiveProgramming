@@ -1,0 +1,43 @@
+# https://jv.umsa.bo/oj/problem.php?cid=2870&pid=130
+## https://jv.umsa.bo/oj/problem.php?id=1686
+#    Copiado al portapapeles
+#  Generador de muñecos de nieve
+#  Enviar
+#  Estado
+#  Descripción
+#    Addis, Gamax y Rolo decidieron ir al Illimani, y comenzaron a jugar haciendo muñecos de nieve, cada muñeco de nieve consiste de cero o más bolas de nieves apiladas una encima de otra, afortunadamente llevaron su OCE (Ostentosa ClonadoraEspecializada) que les permite clonar muñecos de nieve, con la ayuda de su ostentosoaparato ellos pueden:
+#    de nieve, cada muñeco de nieve consiste de cero o más bolas de nieves apiladas una encima de otra, afortunadamente llevaron su OCE (Ostentosa ClonadoraEspecializada) que les permite clonar muñecos de nieve, con la ayuda de su ostentosoaparato ellos pueden:
+#    encima de otra, afortunadamente llevaron su OCE (Ostentosa ClonadoraEspecializada) que les permite clonar muñecos de nieve, con la ayuda de su ostentosoaparato ellos pueden:
+#    OCE (Ostentosa ClonadoraEspecializada) que les permite clonar muñecos de nieve, con la ayuda de su ostentosoaparato ellos pueden:
+#    Especializada) que les permite clonar muñecos de nieve, con la ayuda de su ostentosoaparato ellos pueden:
+#    aparato ellos pueden:
+#    1) clonar el i-ésimo muñeco de nieve, y añadir una nueva bola de nieve de masa Mencima.2) clonar el I-ésimo muñeco de nieve, y remover la bola de nieve de más arriba.
+#    encima.2) clonar el I-ésimo muñeco de nieve, y remover la bola de nieve de más arriba.
+#    2) clonar el I-ésimo muñeco de nieve, y remover la bola de nieve de más arriba.
+#    Inicialmente ellos tienen un muñeco de nieve hecho de 0 bolas de nieve, y de ahídeciden hacer muchas de estas clonaciones, usando su conveniente aparato y ahoraestán interesados en saber cuanta nieve usaron en todas estás clonaciones.
+#    deciden hacer muchas de estas clonaciones, usando su conveniente aparato y ahoraestán interesados en saber cuanta nieve usaron en todas estás clonaciones.
+#    están interesados en saber cuanta nieve usaron en todas estás clonaciones.
+#   Entrada
+#    La primera línea consiste de un número $N$ $(1 \leq N \leq 1000000)$ el número declonaciones que los 3 amigos realizaron. Las siguiente $N$ líneas contienen lainformación de la i-ésima clonación y vienen en el siguiente formato:pos $M$ : $(0 \leq pos < i)$, $(1 \leq M \leq 10000)$ esta operación realiza las clonaciones de tipo1, clona el muñeco en la posición i-ésima y le añade una bola de nieve de masa Mencima.pos $0$: $(0 \leq pos < i)$ esta operación realiza las clonaciones del tipo 2, clona el muñecoen la posición i-ésima y remueve la bola de nieve de más arriba. Garantizamos queesta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    clonaciones que los 3 amigos realizaron. Las siguiente $N$ líneas contienen lainformación de la i-ésima clonación y vienen en el siguiente formato:pos $M$ : $(0 \leq pos < i)$, $(1 \leq M \leq 10000)$ esta operación realiza las clonaciones de tipo1, clona el muñeco en la posición i-ésima y le añade una bola de nieve de masa Mencima.pos $0$: $(0 \leq pos < i)$ esta operación realiza las clonaciones del tipo 2, clona el muñecoen la posición i-ésima y remueve la bola de nieve de más arriba. Garantizamos queesta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    información de la i-ésima clonación y vienen en el siguiente formato:pos $M$ : $(0 \leq pos < i)$, $(1 \leq M \leq 10000)$ esta operación realiza las clonaciones de tipo1, clona el muñeco en la posición i-ésima y le añade una bola de nieve de masa Mencima.pos $0$: $(0 \leq pos < i)$ esta operación realiza las clonaciones del tipo 2, clona el muñecoen la posición i-ésima y remueve la bola de nieve de más arriba. Garantizamos queesta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    pos $M$ : $(0 \leq pos < i)$, $(1 \leq M \leq 10000)$ esta operación realiza las clonaciones de tipo1, clona el muñeco en la posición i-ésima y le añade una bola de nieve de masa Mencima.pos $0$: $(0 \leq pos < i)$ esta operación realiza las clonaciones del tipo 2, clona el muñecoen la posición i-ésima y remueve la bola de nieve de más arriba. Garantizamos queesta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    1, clona el muñeco en la posición i-ésima y le añade una bola de nieve de masa Mencima.pos $0$: $(0 \leq pos < i)$ esta operación realiza las clonaciones del tipo 2, clona el muñecoen la posición i-ésima y remueve la bola de nieve de más arriba. Garantizamos queesta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    encima.pos $0$: $(0 \leq pos < i)$ esta operación realiza las clonaciones del tipo 2, clona el muñecoen la posición i-ésima y remueve la bola de nieve de más arriba. Garantizamos queesta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    pos $0$: $(0 \leq pos < i)$ esta operación realiza las clonaciones del tipo 2, clona el muñecoen la posición i-ésima y remueve la bola de nieve de más arriba. Garantizamos queesta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    en la posición i-ésima y remueve la bola de nieve de más arriba. Garantizamos queesta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    esta operación no se realizará en muñecos de hechos de 0 bolas de nieve.Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    Recuerda una vez que clonas un muñeco de nieve, no destruyes el anterior, y ahoratienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    tienes un nuevo muñeco de nieve en la i-ésima posición. Inicialmente partes de unmuñeco hecho de $0$ bolas de nieve en la posición $0$.
+#    muñeco hecho de $0$ bolas de nieve en la posición $0$.
+#   Salida
+#    Para la i-ésima clonación imprime el número de bolas de nieve que tiene el muñeco denieve y la cantidad de nieve usada para ese muñeco de nieve separados por espaciouno por línea, y la suma finalmente imprime la cantidad total de nieve que usaron los 3amigos en la creación de todos sus muñecos de nieve.
+#    nieve y la cantidad de nieve usada para ese muñeco de nieve separados por espaciouno por línea, y la suma finalmente imprime la cantidad total de nieve que usaron los 3amigos en la creación de todos sus muñecos de nieve.
+#    uno por línea, y la suma finalmente imprime la cantidad total de nieve que usaron los 3amigos en la creación de todos sus muñecos de nieve.
+#    amigos en la creación de todos sus muñecos de nieve.
+#   Ejemplo Entrada
+#    60 11 92 81 03 75 0
+#   Ejemplo Salida
+#    1 12 103 180 04 253 1872
+#   Ayuda
+
