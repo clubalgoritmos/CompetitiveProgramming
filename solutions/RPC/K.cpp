@@ -6,10 +6,11 @@
 
 using namespace std;
 
-bool check_acronym(const string& acronym) {
+bool check_acronym(const string &acronym) {
     set<char> vowels = {'A', 'E', 'I', 'O', 'U', 'Y'};
     for (int i = 0; i <= acronym.size() - 3; ++i) {
-        if (vowels.count(acronym[i]) || vowels.count(acronym[i+1]) || vowels.count(acronym[i+2])) {
+        if (vowels.count(acronym[i]) || vowels.count(acronym[i + 1]) ||
+            vowels.count(acronym[i + 2])) {
             continue;
         } else {
             return false;
@@ -18,7 +19,7 @@ bool check_acronym(const string& acronym) {
     return true;
 }
 
-void generate_acronyms(vector<string>& prefixes, string acronym = "", int i = 0) {
+void generate_acronyms(vector<string> &prefixes, string acronym = "", int i = 0) {
     if (i == prefixes.size()) {
         if (check_acronym(acronym)) {
             cout << acronym.size() << endl;

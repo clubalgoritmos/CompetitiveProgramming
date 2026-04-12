@@ -13,7 +13,7 @@ while True:
         if len(paths[i]) > 1 and paths[i][0] == commonpath:
             paths[i].pop(0)
         else:
-            paths[i].insert(0,"..")
+            paths[i].insert(0, "..")
     if last <= sum(len(path) for path in paths):
         print(last)
         break

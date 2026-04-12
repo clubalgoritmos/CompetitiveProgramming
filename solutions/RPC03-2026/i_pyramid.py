@@ -1,6 +1,5 @@
 import sys
 
-
 input = sys.stdin.readline
 
 UNKNOWN = 100
@@ -77,4 +76,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main() 
+    main()

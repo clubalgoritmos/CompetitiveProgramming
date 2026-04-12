@@ -1,6 +1,7 @@
 from math import gcd
 from collections import defaultdict
 
+
 def suffix_array(s):
     s.append(0)
     n = len(s)
@@ -25,6 +26,7 @@ def suffix_array(s):
 
     return sa[1:]
 
+
 def kasai(s, sa):
     n = len(s)
     k = 0
@@ -36,7 +38,7 @@ def kasai(s, sa):
         if ra[i] == n - 1:
             k = 0
             continue
-        j = sa[ra[i]-1]
+        j = sa[ra[i] - 1]
         while i + k < n and j + k < n and s[i + k] == s[j + k]:
             k += 1
         lcp[ra[i]] = k
@@ -44,13 +46,14 @@ def kasai(s, sa):
             k -= 1
     return lcp
 
+
 class RMQ:
     def __init__(self, v):
         self.n = len(v)
         self.log = [0] * (self.n + 1)
         for i in range(2, self.n + 1):
             self.log[i] = self.log[i // 2] + 1
-        self.m = [[(float('inf'), -1)] * (self.n + 1) for _ in range(self.log[self.n] + 1)]
+        self.m = [[(float("inf"), -1)] * (self.n + 1) for _ in range(self.log[self.n] + 1)]
         for i in range(self.n):
             self.m[0][i] = v[i]
         j = 1
@@ -65,6 +68,7 @@ class RMQ:
         j = self.log[b - a + 1]
         return min(self.m[j][a], self.m[j][b - (1 << j) + 1])[1]
 
+
 def solve(a, b, l, rm):
     if a > b:
         return 0
@@ -74,6 +78,7 @@ def solve(a, b, l, rm):
     tot += solve(a, mid - 1, l, rm)
     tot += solve(mid + 1, b, l, rm)
     return tot
+
 
 def main():
     n = int(input())
@@ -89,6 +94,7 @@ def main():
     sum_ //= g
     tot //= g
     print(f"{sum_}/{tot}")
+
 
 if __name__ == "__main__":
     main()

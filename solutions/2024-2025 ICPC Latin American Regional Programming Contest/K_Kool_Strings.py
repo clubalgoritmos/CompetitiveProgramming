@@ -1,4 +1,4 @@
-#solution
+# solution
 K, S = input().split()
 K = int(K)
 S = list(S)
@@ -18,7 +18,7 @@ if K == 2:
     exit()
 
 # timelimit
-# for i in range(N - K + 1): 
+# for i in range(N - K + 1):
 #    char = list(set(S[i : i + K]))
 #    if len(char) <= 1:
 #        if (i + K < N and S[i + K] == char[0]) or i + K >= N:
@@ -41,19 +41,25 @@ for i in range(1, N):
     else:
         if c >= K:
             w += c // K
-            ls.append((c // K) * [K - 1, 1] + [c % K] if c % K != 0 else (c // K - 1) * [K - 1, 1] + [K - 2, 1, 1])
+            ls.append(
+                (c // K) * [K - 1, 1] + [c % K]
+                if c % K != 0
+                else (c // K - 1) * [K - 1, 1] + [K - 2, 1, 1]
+            )
         else:
             ls.append([c])
         c = 1
 
 if c >= K:
     w += c // K
-    ls.append((c // K) * [K - 1, 1] + [c % K] if c % K != 0 else (c // K - 1) * [K - 1, 1] + [K - 2, 1, 1])
+    ls.append(
+        (c // K) * [K - 1, 1] + [c % K] if c % K != 0 else (c // K - 1) * [K - 1, 1] + [K - 2, 1, 1]
+    )
 else:
     ls.append([c])
 
 for i, sublist in enumerate(ls):
     for j, li in enumerate(sublist):
-        rs.append(fs * li if (i+j) % 2 == 0 else sd * li)
-#print(ls)
-print(w, ''.join(rs))
+        rs.append(fs * li if (i + j) % 2 == 0 else sd * li)
+# print(ls)
+print(w, "".join(rs))

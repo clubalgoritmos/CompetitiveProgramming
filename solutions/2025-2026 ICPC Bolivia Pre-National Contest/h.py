@@ -2,14 +2,17 @@ import sys
 
 input = sys.stdin.readline
 
+
 class Fenw:
     def __init__(self, n):
         self.n = n
-        self.fw = [0]*(n+1)
+        self.fw = [0] * (n + 1)
+
     def update(self, i, diff):
         while i <= self.n:
             self.fw[i] += diff
             i += i & -i
+
     def query(self, i):
         s = 0
         while i:
@@ -17,15 +20,17 @@ class Fenw:
             i -= i & -i
         return s
 
+
 def lower_bound(arr, value):
     lo, hi = 0, len(arr)
     while lo < hi:
-        mid = (lo+hi)//2
+        mid = (lo + hi) // 2
         if arr[mid] < value:
-            lo = mid+1
+            lo = mid + 1
         else:
             hi = mid
     return lo
+
 
 N, Q = map(int, input().split())
 points = []
@@ -45,14 +50,14 @@ for idx in range(Q):
     query_lp.append(l)
 
 all_lp = sorted(set(lp_list + query_lp))
-lp_to_idx = {val: i+1 for i, val in enumerate(all_lp)}
+lp_to_idx = {val: i + 1 for i, val in enumerate(all_lp)}
 size = len(all_lp)
 
 points.sort(key=lambda pr: pr[1])
 queries.sort(key=lambda q: q[1])
 
 fenw = Fenw(size)
-ans = [0]*Q
+ans = [0] * Q
 pt_idx = 0
 n_points = len(points)
 

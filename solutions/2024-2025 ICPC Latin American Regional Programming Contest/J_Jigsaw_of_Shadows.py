@@ -1,4 +1,4 @@
-#solucion
+# solucion
 import sys
 import math
 

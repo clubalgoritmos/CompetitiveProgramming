@@ -1,4 +1,4 @@
-#solucion
+# solucion
 def find_cycles(a):
     v = [False] * len(a)
     s = 0
@@ -13,6 +13,7 @@ def find_cycles(a):
             if c > 0:
                 s += c - 1
     return s
+
 
 n = int(input())
 x = list(map(int, input().split()))

@@ -4,7 +4,7 @@ import sys
 def main() -> None:
     data = list(map(int, sys.stdin.buffer.read().split()))
     c = data[0]
-    votes = data[1:1 + c]
+    votes = data[1 : 1 + c]
 
     total_votes = sum(votes)
     majority = total_votes // 2 + 1

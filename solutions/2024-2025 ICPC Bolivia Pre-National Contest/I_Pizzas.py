@@ -24,10 +24,11 @@ class UnionFind:
                 self.rank[rootX] += 1
                 self.size[rootX] += self.size[rootY]
 
+
 MOD = 10**9 + 7
 
 n, m = map(int, input().split())
-uf = UnionFind(n + 1) 
+uf = UnionFind(n + 1)
 
 for _ in range(m):
     a, b = map(int, input().split())

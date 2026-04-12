@@ -14,11 +14,13 @@ cities.sort()
 ant = [i for i in range(n + 1)]
 rk = [0] * (n + 1)
 
+
 def find(u):
     while ant[u] != u:
         ant[u] = ant[ant[u]]
         u = ant[u]
     return u
+
 
 def union(u, v):
     u_root = find(u)
@@ -32,6 +34,7 @@ def union(u, v):
         if rk[u_root] == rk[v_root]:
             rk[u_root] += 1
     return True
+
 
 cost = 0
 count = 0

@@ -1,5 +1,6 @@
 import math
 
+
 def is_prime(n):
     if n <= 1:
         return False
@@ -13,6 +14,7 @@ def is_prime(n):
             return False
         i += 6
     return True
+
 
 N = int(input())
 sqrt_N = int(math.sqrt(N))

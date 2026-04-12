@@ -15,23 +15,24 @@ def solve(i, j, n, a, dp, c):
     dp[i][j] = ans
     return ans
 
+
 def main():
     n = int(input())
     a = list(map(int, input().split()))
     sum_a = sum(a)
-    
+
     if sum_a % 2 != 0:
         print("-1")
         return
-    
+
     dp = [[-1] * (sum_a // 2 + 1) for _ in range(n)]
     c = [[0] * (sum_a // 2 + 1) for _ in range(n)]
-    
+
     ans = solve(0, sum_a // 2, n, a, dp, c)
     if not ans:
         print("-1")
         return
-    
+
     i, j = 0, sum_a // 2
     va, vb = [], []
     while i < n:
@@ -42,10 +43,10 @@ def main():
         else:
             va.append(a[i])
         i += 1
-    
+
     va.sort(reverse=True)
     vb.sort(reverse=True)
-    
+
     suma, sumb = 0, 0
     i, j = 0, 0
     result = []
@@ -58,8 +59,9 @@ def main():
             sumb += vb[j]
             result.append(vb[j])
             j += 1
-    
+
     print(" ".join(map(str, result)))
+
 
 if __name__ == "__main__":
     main()

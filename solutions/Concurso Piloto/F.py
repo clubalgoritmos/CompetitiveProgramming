@@ -1,6 +1,7 @@
 import heapq
 import sys
 
+
 def solve():
     data = sys.stdin.read().strip().split()
     it = iter(data)

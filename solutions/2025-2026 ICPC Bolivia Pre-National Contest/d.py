@@ -23,7 +23,7 @@ for elems in bombas:
     bomb_masks.append(mask)
 
 dp = defaultdict(int)
-dp[0] = 1 
+dp[0] = 1
 
 for b in bomb_masks:
     nuevo = defaultdict(int)
@@ -35,7 +35,7 @@ for b in bomb_masks:
 f = 0
 for mask, coef in dp.items():
     popcnt = bin(mask).count("1")
-    f += coef / (2 ** popcnt)
+    f += coef / (2**popcnt)
 
-resultado = (2 ** N) * f
+resultado = (2**N) * f
 print(int(resultado))

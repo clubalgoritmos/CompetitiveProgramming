@@ -1,4 +1,4 @@
-#Solucion
+# Solucion
 Q = int(input())
 for _ in range(Q):
     N, T = map(int, input().split())
@@ -10,4 +10,4 @@ for _ in range(Q):
                 count += 1
             if i != min_t // i and min_t // i <= N:
                 count += 1
-    print(N if count==0 else count)
+    print(N if count == 0 else count)

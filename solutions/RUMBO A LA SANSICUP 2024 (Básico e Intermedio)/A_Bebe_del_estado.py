@@ -1,2 +1,2 @@
 A, B = input().split()
-print(int(A[-1])+int(B[-1]))
+print(int(A[-1]) + int(B[-1]))

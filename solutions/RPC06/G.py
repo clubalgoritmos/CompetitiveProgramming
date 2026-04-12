@@ -30,6 +30,7 @@ class Graph:
             self.mu_mc = (self.mu_mc[0], self.mu_mc[1] + local_count)
         return ss
 
+
 def main():
     N = int(input())
     graph = Graph(N)
@@ -39,6 +40,7 @@ def main():
 
     graph.dfs(1, -1)
     print(graph.mu_mc[0], graph.mu_mc[1])
+
 
 if __name__ == "__main__":
     main()

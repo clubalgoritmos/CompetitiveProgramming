@@ -1,4 +1,4 @@
-#solution
+# solution
 def pos(it, M, mx):
     i = 0
     j = len(it) - 1
@@ -19,6 +19,7 @@ def pos(it, M, mx):
             sn += 1
             i += 1
     return sn <= M
+
 
 N, M = map(int, input().split())
 it = list(map(int, input().split()))

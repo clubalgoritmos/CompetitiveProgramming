@@ -16,6 +16,7 @@ for i in range(n):
         has[i].add(x)
         adj[i].add(x)
 
+
 def get(i, j):
     if len(adj[i]) > len(adj[j]):
         i, j = j, i
@@ -23,6 +24,7 @@ def get(i, j):
         if k in adj[j]:
             return k
     return -1
+
 
 for i in range(n):
     for j in range(i, n):
@@ -43,6 +45,7 @@ for ini in range(n):
                 reach[ini][y] = True
                 par[ini][y] = x
                 q.append(y)
+
 
 def solve(a, b):
     for i in range(n):
@@ -65,6 +68,7 @@ def solve(a, b):
                     print(" ".join(map(lambda x: str(x + 1), ans)))
                     return
     print("-1")
+
 
 q = int(input())
 for _ in range(q):

@@ -1,5 +1,6 @@
 import math
 
+
 def max_area(n):
     max_area = 0
     step = 0.0000000001
@@ -22,6 +23,7 @@ def max_area(n):
                 print(max_area)
         h += step
     return max_area
+
 
 n = int(input())
 print(f"{max_area(n):.10f}")

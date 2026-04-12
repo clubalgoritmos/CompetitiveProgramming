@@ -5,7 +5,7 @@ using namespace std;
 vector<int> subtree_size;
 int max_traversals = 0, count = 0;
 
-int dfs(int node, int parent, const vector<vector<int>>& adj) {
+int dfs(int node, int parent, const vector<vector<int>> &adj) {
     subtree_size[node] = 1;
     for (int child : adj[node]) {
         if (child != parent) {
@@ -32,7 +32,8 @@ int main() {
     for (int i = 0; i < N - 1; ++i) {
         int u, v;
         cin >> u >> v;
-        --u; --v;
+        --u;
+        --v;
         adj[u].push_back(v);
         adj[v].push_back(u);
     }

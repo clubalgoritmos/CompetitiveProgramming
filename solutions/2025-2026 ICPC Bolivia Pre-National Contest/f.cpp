@@ -5,10 +5,12 @@ int main() {
     int n;
     cin >> n;
     vector<int> la(n);
-    for (int i = 0; i < n; ++i) cin >> la[i];
+    for (int i = 0; i < n; ++i)
+        cin >> la[i];
 
     multiset<int> prefix, suffix;
-    for (int x : la) suffix.insert(x);
+    for (int x : la)
+        suffix.insert(x);
 
     vector<long long> output;
 
@@ -23,7 +25,8 @@ int main() {
         long long sum_prefix = 0, sum_suffix = 0;
 
         if (l > (int)prefix.size()) {
-            for (int v : prefix) sum_prefix += v;
+            for (int v : prefix)
+                sum_prefix += v;
         } else {
             auto it = prefix.rbegin();
             for (int cnt = 0; cnt < l && it != prefix.rend(); ++cnt, ++it)
@@ -31,7 +34,8 @@ int main() {
         }
 
         if (r > (int)suffix.size()) {
-            for (int v : suffix) sum_suffix += v;
+            for (int v : suffix)
+                sum_suffix += v;
         } else {
             auto it = suffix.begin();
             for (int cnt = 0; cnt < r && it != suffix.end(); ++cnt, ++it)
@@ -41,6 +45,7 @@ int main() {
         output.push_back(sum_prefix - sum_suffix);
     }
 
-    for (auto v : output) cout << v << '\n';
+    for (auto v : output)
+        cout << v << '\n';
     return 0;
 }

@@ -1,11 +1,13 @@
-X,Y,S = input().split()
-S=int(S)
+X, Y, S = input().split()
+S = int(S)
+
 
 def base(num_str, base):
     try:
         return all(0 <= int(d) < base for d in num_str)
     except ValueError:
         return False
+
 
 res = None
 for bx in range(2, 11):

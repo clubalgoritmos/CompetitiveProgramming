@@ -39,9 +39,24 @@ def count_spotlight_sequences(w, d):
                 pal += ways
     else:
         centers = (
-            (1, lambda ab, bc: abs(2 * ab + 1) <= d and abs(2 * bc) <= d and abs(2 * (ab + bc) + 1) <= d),
-            (2, lambda ab, bc: abs(2 * ab - 1) <= d and abs(2 * bc + 1) <= d and abs(2 * (ab + bc)) <= d),
-            (3, lambda ab, bc: abs(2 * ab) <= d and abs(2 * bc - 1) <= d and abs(2 * (ab + bc) - 1) <= d),
+            (
+                1,
+                lambda ab, bc: abs(2 * ab + 1) <= d
+                and abs(2 * bc) <= d
+                and abs(2 * (ab + bc) + 1) <= d,
+            ),
+            (
+                2,
+                lambda ab, bc: abs(2 * ab - 1) <= d
+                and abs(2 * bc + 1) <= d
+                and abs(2 * (ab + bc)) <= d,
+            ),
+            (
+                3,
+                lambda ab, bc: abs(2 * ab) <= d
+                and abs(2 * bc - 1) <= d
+                and abs(2 * (ab + bc) - 1) <= d,
+            ),
         )
 
         for (ab, bc, last, _), ways in half_dp.items():
@@ -50,6 +65,7 @@ def count_spotlight_sequences(w, d):
                     pal += ways
 
     return total - pal
+
 
 w, d = map(int, input().split())
 print(count_spotlight_sequences(w, d))

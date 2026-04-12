@@ -1,10 +1,10 @@
 s = input().strip()
 M = False
 c = 0
-ant = '1'
+ant = "1"
 
 for ch in s:
-    if ch == ' ':
+    if ch == " ":
         if ant != ch:
             c += 1
     if ch.isupper():
@@ -12,7 +12,7 @@ for ch in s:
             c += 1
         elif ch.lower() == ant:
             c += 1
-        elif M and ant == ' ':
+        elif M and ant == " ":
             c += 1
         elif ant != ch:
             c += 2

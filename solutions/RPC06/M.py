@@ -1,9 +1,11 @@
 import math
 
+
 def volumen_tronco_cono(l, r, theta):
     h = l * math.cos(theta)
     R = r + l * math.sin(theta)
-    return (math.pi * h * (R**2 + R*r + r**2)) / 3
+    return (math.pi * h * (R**2 + R * r + r**2)) / 3
+
 
 def encontrar_angulo_optimo(l, r):
     lo, hi = 0, math.pi / 2
@@ -17,6 +19,7 @@ def encontrar_angulo_optimo(l, r):
         else:
             hi = mid2
     return (lo + hi) / 2
+
 
 N = int(input())
 for _ in range(N):

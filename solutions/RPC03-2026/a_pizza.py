@@ -6,10 +6,10 @@ ls = 0
 for _ in range(n):
     sz, sl = input().split()
     sl = int(sl)
-    
-    if sz == 'S':
+
+    if sz == "S":
         ss += sl
-    elif sz == 'M':
+    elif sz == "M":
         ms += sl
     else:
         ls += sl

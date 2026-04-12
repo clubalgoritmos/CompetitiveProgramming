@@ -1,5 +1,5 @@
 def max_passed_exams(exams):
-    exams.sort(key=lambda x: x[3]*abs(x[2]-x[1]))  # Sort exams by start time
+    exams.sort(key=lambda x: x[3] * abs(x[2] - x[1]))  # Sort exams by start time
     current_time = 0
     passed_exams = 0
 
@@ -11,6 +11,7 @@ def max_passed_exams(exams):
             passed_exams += 1
 
     return passed_exams
+
 
 # Read input
 n = int(input())

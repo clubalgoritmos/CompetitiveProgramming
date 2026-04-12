@@ -1,4 +1,5 @@
 import sys
+
 input = sys.stdin.readline
 
 N, K = map(int, input().split())
@@ -14,7 +15,7 @@ while mn <= mx:
     if any(d > K for d in df):
         ps = False
     else:
-        R = float('inf')
+        R = float("inf")
         mx_j = -1
         for j, d in enumerate(df, 1):
             if d > 0:
@@ -23,7 +24,7 @@ while mn <= mx:
         if mx_j == -1:
             ps = True
         else:
-            ps = (R >= mx_j)
+            ps = R >= mx_j
 
     if ps:
         rs = md

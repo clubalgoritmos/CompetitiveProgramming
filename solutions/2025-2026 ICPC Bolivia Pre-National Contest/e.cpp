@@ -30,7 +30,6 @@ int main() {
             suma_grupo1.push_back(suma);
     }
 
-
     int n2 = grupo2.size();
     for (int mask = 0; mask < (1 << n2); ++mask) {
         int suma = 0;

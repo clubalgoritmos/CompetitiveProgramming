@@ -1,6 +1,7 @@
 a, b = map(int, input().split())
 m = [input().strip() for _ in range(a)]
 
+
 def rec(h):
     p = []
     ma = 0
@@ -14,11 +15,12 @@ def rec(h):
     h.pop()
     return ma
 
+
 h = [0] * b
 ma = 0
 for i in range(a):
     for j in range(b):
-        if m[i][j] == '1':
+        if m[i][j] == "1":
             h[j] += 1
         else:
             h[j] = 0

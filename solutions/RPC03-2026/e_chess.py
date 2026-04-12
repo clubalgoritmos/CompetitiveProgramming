@@ -1,7 +1,6 @@
 import sys
 from functools import lru_cache
 
-
 sys.setrecursionlimit(10000)
 
 
@@ -11,7 +10,7 @@ def parse_loc(text):
 
 def sign(value):
     return (value > 0) - (value < 0)
- 
+
 
 n, m = map(int, sys.stdin.readline().split())
 pieces = []
@@ -40,16 +39,16 @@ def is_legal_move(piece_type, state, source_index, target_index):
     occupied = occupied_set(state)
     occupied.discard(state[source_index])
 
-    if piece_type == 'N':
+    if piece_type == "N":
         return (abs(delta_row), abs(delta_col)) in {(1, 2), (2, 1)}
 
-    if piece_type == 'K':
+    if piece_type == "K":
         return max(abs(delta_row), abs(delta_col)) == 1
 
-    if piece_type in {'R', 'Q'} and (delta_row == 0 or delta_col == 0):
+    if piece_type in {"R", "Q"} and (delta_row == 0 or delta_col == 0):
         step_row = sign(delta_row)
         step_col = sign(delta_col)
-    elif piece_type in {'B', 'Q'} and abs(delta_row) == abs(delta_col):
+    elif piece_type in {"B", "Q"} and abs(delta_row) == abs(delta_col):
         step_row = sign(delta_row)
         step_col = sign(delta_col)
     else:
@@ -82,7 +81,9 @@ def generate_moves(state):
             if not is_legal_move(piece_type, state, source_index, target_index):
                 continue
             target_row, target_col = decode(state[target_index])
-            moves.append((source_row, source_col, target_row, target_col, source_index, target_index))
+            moves.append(
+                (source_row, source_col, target_row, target_col, source_index, target_index)
+            )
 
     moves.sort()
     return moves
@@ -94,7 +95,14 @@ def solve(state):
     if alive_count == 1:
         return ()
 
-    for source_row, source_col, target_row, target_col, source_index, target_index in generate_moves(state):
+    for (
+        source_row,
+        source_col,
+        target_row,
+        target_col,
+        source_index,
+        target_index,
+    ) in generate_moves(state):
         next_state = list(state)
         next_state[source_index] = target_row * n + target_col
         next_state[target_index] = -1
@@ -109,7 +117,9 @@ def solve(state):
 answer = solve(tuple(start_state))
 
 if answer is None:
-    print('No solution')
+    print("No solution")
 else:
     for piece_type, source_row, source_col, target_row, target_col in answer:
-        print(f"{piece_type}: {chr(65 + source_row)}{source_col + 1} -> {chr(65 + target_row)}{target_col + 1}")
+        print(
+            f"{piece_type}: {chr(65 + source_row)}{source_col + 1} -> {chr(65 + target_row)}{target_col + 1}"
+        )

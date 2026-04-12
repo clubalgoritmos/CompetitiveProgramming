@@ -1,3 +1,3 @@
-#solution
+# solution
 S = input()
-print(len(S)-len(sorted(set(S))))
+print(len(S) - len(sorted(set(S))))

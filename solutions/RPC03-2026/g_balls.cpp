@@ -4,22 +4,25 @@
 using namespace std;
 
 /* * FUNCIÓN REUTILIZABLE: Raíz cuadrada entera exacta.
- * ¿Por qué no usar sqrt() directamente? 
- * Porque el discriminante puede llegar a ~4 * 10^18. 
+ * ¿Por qué no usar sqrt() directamente?
+ * Porque el discriminante puede llegar a ~4 * 10^18.
  * El tipo 'double' (usado por sqrt) pierde precisión a partir de 2^53 (~9 * 10^15).
- * Esta función es un salvavidas que te servirá para cualquier proyecto matemático 
+ * Esta función es un salvavidas que te servirá para cualquier proyecto matemático
  * donde manejes enteros de 64 bits al límite.
  */
 long long raiz_entera(long long x) {
-    if (x < 0) return -1;
-    
+    if (x < 0)
+        return -1;
+
     unsigned long long ux = x;
     unsigned long long s = sqrt(ux);
-    
+
     // Ajuste fino para corregir errores de precisión del hardware
-    while ((s + 1) * (s + 1) <= ux) s++;
-    while (s * s > ux) s--;
-    
+    while ((s + 1) * (s + 1) <= ux)
+        s++;
+    while (s * s > ux)
+        s--;
+
     return s;
 }
 
@@ -29,13 +32,14 @@ int main() {
     cin.tie(NULL);
 
     long long p, q;
-    if (!(cin >> p >> q)) return 0;
+    if (!(cin >> p >> q))
+        return 0;
 
     // Iteramos r hasta su límite máximo.
     for (long long r = 1; r <= 1000000; r++) {
         // Coeficientes de la ecuación: p * n^2 - (p + 2qr) * n + 2qr^2 = 0
         long long b = p + 2LL * q * r;
-        
+
         // Discriminante: b^2 - 4ac
         long long delta = b * b - 8LL * p * q * r * r;
 
@@ -45,7 +49,7 @@ int main() {
 
             // Verificamos si es un cuadrado perfecto
             if (s * s == delta) {
-                
+
                 // Evaluamos la primera posible raíz de n: (b - raíz(delta)) / 2p
                 long long num1 = b - s;
                 if (num1 > 0 && num1 % (2LL * p) == 0) {

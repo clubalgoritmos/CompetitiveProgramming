@@ -1,5 +1,6 @@
 import sys
 
+
 def better(x, y):
     if x[1] > y[1]:
         return True
@@ -8,13 +9,14 @@ def better(x, y):
     else:
         return x[0] < y[0]
 
+
 data = sys.stdin.read().split()
 N = int(data[0])
 candidates = []
 index = 1
 for i in range(N):
     s = data[index]
-    a = int(data[index+1])
+    a = int(data[index + 1])
     index += 2
     candidates.append((s, a))
 

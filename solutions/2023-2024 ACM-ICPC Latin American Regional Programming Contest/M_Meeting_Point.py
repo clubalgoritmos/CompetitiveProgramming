@@ -1,6 +1,8 @@
-def dijkstra(Nodos, start, end, banned = -1):
+def dijkstra(Nodos, start, end, banned=-1):
     queue = [(0, start)]
-    visited = {banned,}
+    visited = {
+        banned,
+    }
     while queue:
         cost, node = queue.pop(0)
         if node == end:
@@ -12,23 +14,23 @@ def dijkstra(Nodos, start, end, banned = -1):
             if neighbor in visited:
                 continue
             queue.append((cost + weight, neighbor))
-    return -1,-1,-1
+    return -1, -1, -1
 
-N, M = map(int,input().split())
-P, G = map(int,input().split())
-Nodos = {i+1:set() for i in range(N)}
+
+N, M = map(int, input().split())
+P, G = map(int, input().split())
+Nodos = {i + 1: set() for i in range(N)}
 for _ in range(M):
-    U,V,D = map(int,input().split())
-    Nodos[U].add((V,D))
-    Nodos[V].add((U,D))
+    U, V, D = map(int, input().split())
+    Nodos[U].add((V, D))
+    Nodos[V].add((U, D))
 _, _, costa = dijkstra(Nodos, P, G)
-sw=False
-for i in range(1,N+1):
+sw = False
+for i in range(1, N + 1):
     start, end, costb = dijkstra(Nodos, G, i, P)
     start, end, costc = dijkstra(Nodos, P, i, G)
-    if costa==costb and costc>costa+costb:
-        sw=True
+    if costa == costb and costc > costa + costb:
+        sw = True
         print(end, end=" ")
 if not sw:
-    print('*')
-
+    print("*")
