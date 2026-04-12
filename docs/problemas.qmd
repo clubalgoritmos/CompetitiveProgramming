@@ -13,9 +13,10 @@ listing:
     solutions_count: Soluciones
     official_link: Enlace
   filter-ui: true
+  categories: true
   sort-ui: true
   sort: "title"
   page-size: 25
 ---
 
-Explora todos los problemas detectados por metadatos, con buscador y filtros nativos de Quarto.
+Explora todos los problemas detectados por metadatos, con buscador y filtros.
