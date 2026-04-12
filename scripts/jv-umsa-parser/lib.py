@@ -142,7 +142,9 @@ class Parser:
         links = [row.select("td a")[0] for row in rows if row.select("td a")]
         return [self._get_attrs(link) for link in links]
 
-    def create_contest(self, url: str, continue_on_error: bool = True) -> List[Tuple[str, str, str]]:
+    def create_contest(
+        self, url: str, continue_on_error: bool = True
+    ) -> List[Tuple[str, str, str]]:
         results: List[Tuple[str, str, str]] = []
         for row in self._get_from_table(url):
             if "href" not in row:

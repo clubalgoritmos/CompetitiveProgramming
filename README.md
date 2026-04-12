@@ -46,4 +46,3 @@ Agradezco la base de conocimiento y los repositorios de la comunidad que han ser
 
 
 > *"Siempre pienso en hacer una cosa que me sirva para otras, que todo lo que haga sea útil para más de un lugar o situación."*
-

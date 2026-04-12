@@ -6,7 +6,7 @@ Para mantener el orden y asegurar que el generador de la documentación funcione
 
 ## 1. Agregar Nuevas Soluciones
 
-Todas las soluciones deben ubicarse dentro de la carpeta `solutions/`. Puedes nombrar tu archivo de forma descriptiva, pero lo más importante es incluir los **metadatos** en la cabecera del archivo. 
+Todas las soluciones deben ubicarse dentro de la carpeta `solutions/`. Puedes nombrar tu archivo de forma descriptiva, pero lo más importante es incluir los **metadatos** en la cabecera del archivo.
 
 El script generador (`scripts/build_site.py`) lee estos metadatos para construir automáticamente el sitio web, agrupar las soluciones por problema y competencia, y mostrarlas en pestañas.
 
