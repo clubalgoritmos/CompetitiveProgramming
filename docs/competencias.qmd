@@ -1,93 +1,13 @@
 ---
 title: "Indice de Competencias"
+listing:
+  contents: competitions/*.qmd
+  type: grid
+  categories: true
+  filter-ui: true
+  sort-ui: true
+  sort: "title"
+  page-size: 30
 ---
 
-Vista agregada por competencia con buscador y filtro por tags.
-
-<div class="cp-controls">
-  <input id="competition-search" type="search" placeholder="Buscar competencia..." />
-  <select id="competition-tag">
-    <option value="">Todos los tags</option>
-  </select>
-  <span id="competition-count" class="cp-count"></span>
-</div>
-
-<div id="competition-empty" class="cp-empty" style="display:none;">No hay competencias para los filtros actuales.</div>
-<div id="competition-grid" class="cp-grid"></div>
-
-<script>
-(async function () {
-  const response = await fetch("problems/catalog.json");
-  const data = await response.json();
-
-  const searchEl = document.getElementById("competition-search");
-  const tagEl = document.getElementById("competition-tag");
-  const gridEl = document.getElementById("competition-grid");
-  const countEl = document.getElementById("competition-count");
-  const emptyEl = document.getElementById("competition-empty");
-
-  const tags = [...new Set(data.flatMap(item => item.tags || []))].sort((a, b) => a.localeCompare(b));
-  for (const tag of tags) {
-    const option = document.createElement("option");
-    option.value = tag;
-    option.textContent = tag;
-    tagEl.appendChild(option);
-  }
-
-  const grouped = new Map();
-  for (const item of data) {
-    const key = item.competition;
-    if (!grouped.has(key)) {
-      grouped.set(key, {
-        name: key,
-        problems: [],
-        tags: new Set(),
-        solutions: 0,
-      });
-    }
-    const entry = grouped.get(key);
-    entry.problems.push(item);
-    entry.solutions += item.solutions_count || 0;
-    for (const tag of item.tags || []) {
-      entry.tags.add(tag);
-    }
-  }
-
-  function render() {
-    const term = searchEl.value.trim().toLowerCase();
-    const selectedTag = tagEl.value;
-
-    const items = [...grouped.values()].filter(item => {
-      const matchText = !term || item.name.toLowerCase().includes(term);
-      const matchTag = !selectedTag || item.tags.has(selectedTag);
-      return matchText && matchTag;
-    }).sort((a, b) => a.name.localeCompare(b.name));
-
-    gridEl.innerHTML = "";
-    for (const item of items) {
-      const tagsHtml = [...item.tags]
-        .sort((a, b) => a.localeCompare(b))
-        .slice(0, 8)
-        .map(tag => `<span class="cp-tag">${tag}</span>`)
-        .join(" ");
-
-      const card = document.createElement("article");
-      card.className = "cp-card";
-      card.innerHTML = `
-        <h3>${item.name}</h3>
-        <p><strong>${item.problems.length}</strong> problema(s) · <strong>${item.solutions}</strong> solucion(es)</p>
-        <p>${tagsHtml || "Sin tags"}</p>
-        <p><a href="problemas.html?competition=${encodeURIComponent(item.name)}">Ver problemas de esta competencia</a></p>
-      `;
-      gridEl.appendChild(card);
-    }
-
-    countEl.textContent = `${items.length} competencia(s)`;
-    emptyEl.style.display = items.length === 0 ? "block" : "none";
-  }
-
-  searchEl.addEventListener("input", render);
-  tagEl.addEventListener("change", render);
-  render();
-})();
-</script>
+Vista agregada por competencia con buscador y filtros nativos de Quarto.

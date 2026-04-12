@@ -2,4 +2,85 @@
 title: "Bienvenido"
 ---
 
-{{< include README.md >>}}
+Este sitio organiza soluciones de programacion competitiva por competencia, problema y tags.
+
+## Problemas destacados
+
+<div id="featured-problems" class="cp-grid"></div>
+<p id="featured-empty" class="cp-empty" style="display:none;">Aun no hay problemas destacados. Marca metadato `featured: true` en una solucion para destacarla.</p>
+
+## Secciones rapidas
+
+- [Indice de problemas](docs/problemas.qmd)
+- [Indice de competencias](docs/competencias.qmd)
+- [Documentacion del proyecto](docs/documentacion.qmd)
+
+## Contribuidores
+
+<p>Lista dinamica obtenida desde GitHub.</p>
+<div id="contributors" class="cp-grid"></div>
+<p id="contributors-empty" class="cp-empty" style="display:none;">No se pudieron cargar contribuidores en este momento.</p>
+
+<script>
+(async function () {
+	const featuredHost = document.getElementById("featured-problems");
+	const featuredEmpty = document.getElementById("featured-empty");
+
+	try {
+		const response = await fetch("docs/problems/catalog.json");
+		const catalog = await response.json();
+		const featured = catalog.filter(item => item.featured);
+		const selected = (featured.length ? featured : catalog).slice(0, 6);
+
+		if (!selected.length) {
+			featuredEmpty.style.display = "block";
+		}
+
+		for (const item of selected) {
+			const card = document.createElement("article");
+			card.className = "cp-card";
+			card.innerHTML = `
+				<h3><a href="docs/${item.url}">${item.problem_id}: ${item.title}</a></h3>
+				<p>${item.competition}</p>
+				<p>${(item.tags || []).map(tag => `<span class="cp-tag">${tag}</span>`).join(" ")}</p>
+			`;
+			featuredHost.appendChild(card);
+		}
+	} catch (_) {
+		featuredEmpty.style.display = "block";
+	}
+})();
+
+(async function () {
+	const contributorsHost = document.getElementById("contributors");
+	const contributorsEmpty = document.getElementById("contributors-empty");
+
+	try {
+		const response = await fetch("https://api.github.com/repos/clubalgoritmos/CompetitiveProgramming/contributors?per_page=30", {
+			headers: { "Accept": "application/vnd.github+json" }
+		});
+
+		if (!response.ok) {
+			throw new Error("GitHub API error");
+		}
+
+		const contributors = await response.json();
+		for (const person of contributors) {
+			const card = document.createElement("article");
+			card.className = "cp-card cp-contributor";
+			card.innerHTML = `
+				<img src="${person.avatar_url}" alt="Avatar de ${person.login}" loading="lazy" />
+				<h3><a href="${person.html_url}" target="_blank" rel="noopener">@${person.login}</a></h3>
+				<p>${person.contributions} contribuciones</p>
+			`;
+			contributorsHost.appendChild(card);
+		}
+
+		if (!contributors.length) {
+			contributorsEmpty.style.display = "block";
+		}
+	} catch (_) {
+		contributorsEmpty.style.display = "block";
+	}
+})();
+</script>

@@ -33,7 +33,9 @@ def main():
     solutions_dir = Path('solutions')
     docs_dir = Path('docs')
     output_dir = docs_dir / 'problems'
+    competitions_dir = docs_dir / 'competitions'
     output_dir.mkdir(parents=True, exist_ok=True)
+    competitions_dir.mkdir(parents=True, exist_ok=True)
     
     # Estructura: problems[competition][problem_id] = list of files
     problems = defaultdict(lambda: defaultdict(list))
@@ -65,6 +67,7 @@ def main():
         comp_slug = slugify(competition)
         comp_dir = output_dir / comp_slug
         comp_dir.mkdir(parents=True, exist_ok=True)
+        competition_tags = []
         
         for problem_id, files in probs.items():
             files = sorted(files, key=lambda item: (item.get('language', ''), item.get('file_path', '')))
@@ -77,11 +80,14 @@ def main():
                 for tag in meta.get('tags', []):
                     if tag and tag not in tag_set:
                         tag_set.append(tag)
+                    if tag and tag not in competition_tags:
+                        competition_tags.append(tag)
             languages = []
             for meta in files:
                 lang = meta.get('language', 'Code')
                 if lang not in languages:
                     languages.append(lang)
+            featured = any(str(meta.get('featured', '')).strip().lower() in {'true', '1', 'yes', 'y'} for meta in files)
             
             qmd_path = comp_dir / f"{problem_slug}.qmd"
             with open(qmd_path, 'w', encoding='utf-8') as f:
@@ -122,9 +128,28 @@ def main():
                 "description": desc,
                 "tags": tag_set,
                 "languages": languages,
+                "featured": featured,
                 "solutions_count": len(files),
                 "url": f"problems/{comp_slug}/{problem_slug}.html",
             })
+
+        competition_page = competitions_dir / f"{comp_slug}.qmd"
+        with open(competition_page, 'w', encoding='utf-8') as f:
+            f.write("---\n")
+            f.write(f"title: \"{competition}\"\n")
+            if competition_tags:
+                f.write("categories:\n")
+                for tag in competition_tags:
+                    f.write(f"  - \"{tag}\"\n")
+            f.write("listing:\n")
+            f.write(f"  contents: ../problems/{comp_slug}/*.qmd\n")
+            f.write("  type: table\n")
+            f.write("  fields: [title, categories]\n")
+            f.write("  filter-ui: true\n")
+            f.write("  sort: \"title\"\n")
+            f.write("  page-size: 20\n")
+            f.write("---\n\n")
+            f.write("Problemas de esta competencia.\n")
 
     catalog = sorted(catalog, key=lambda item: (item["competition"].lower(), str(item["problem_id"]).lower()))
     catalog_path = output_dir / 'catalog.json'

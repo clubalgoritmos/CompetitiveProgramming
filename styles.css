@@ -51,6 +51,17 @@
 	margin-top: 0;
 }
 
+.cp-contributor {
+	text-align: center;
+}
+
+.cp-contributor img {
+	border-radius: 999px;
+	height: 72px;
+	object-fit: cover;
+	width: 72px;
+}
+
 .cp-empty {
 	border: 1px dashed #cbd5e1;
 	border-radius: 0.6rem;

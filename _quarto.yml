@@ -9,6 +9,7 @@ project:
 
 website:
   title: "Competitive Programming Knowledge Hub"
+  repo-url: "https://github.com/clubalgoritmos/CompetitiveProgramming"
   navbar:
     left:
       - href: index.qmd
@@ -17,8 +18,14 @@ website:
         text: Problemas
       - href: docs/competencias.qmd
         text: Competencias
-      - href: docs/documentacion.qmd
-        text: Documentacion
+      - text: Documentacion
+        menu:
+          - href: docs/documentacion.qmd
+            text: Documentacion
+          - href: docs/guia-contribucion.qmd
+            text: Guia de contribucion
+          - href: docs/sobre-proyecto.qmd
+            text: Sobre el proyecto
 
 format:
   html:

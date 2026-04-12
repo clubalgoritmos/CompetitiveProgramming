@@ -9,11 +9,6 @@ Esta seccion reune guias para contribuir, estructura del proyecto y notas tecnic
 - [Guia de contribucion](guia-contribucion.qmd)
 - [Sobre el proyecto](sobre-proyecto.qmd)
 
-## Documentos tecnicos
-
-- [Introduccion](Introducción.md)
-- [Analisis](Analisis.md)
-
 ## Flujo recomendado
 
 1. Agregar metadatos en cada solucion nueva.
